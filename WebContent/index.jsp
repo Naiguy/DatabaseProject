@@ -8,8 +8,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
+<script type="text/javascript" src="overhaul.js"></script>
 <title>GAMEOVERHAUL</title>
-<link>
 </head>
 <body>
 <%@ page import="java.io.*" %> 
@@ -22,28 +22,28 @@
 
 <div id="sideNav">
 
-	<div class="box" id="box1">
+	<div class="box" onclick="openSecondNav()" id="box1">
 		<h2>SYSTEM</h2>
 	</div>
-	<div class="box" id="box2">
+	<div class="box" onclick="openSecondNav()" id="box2">
 		<h2>GENRE</h2>
 	</div>
-	<div class="box" id="box3">
+	<div class="box" onclick="openSecondNav()" id="box3">
 		<h2>DEVELOPER</h2>
 	</div>
-	<div class="box" id="box4">
+	<div class="box" onclick="openSecondNav()" id="box4">
 		<h2>PLATFORM</h2>
 	</div>
-	<div class="box" id="box5">
+	<div class="box" onclick="openSecondNav()" id="box5">
 		<h2>FRANCHISE</h2>
 	</div>
-	<div class="box" id="box6">
+	<div class="box" onclick="openSecondNav()" id="box6">
 		<h2>ENGINE</h2>
 	</div>
-	<div class="box" id="box7">
+	<div class="box" onclick="openSecondNav()" id="box7">
 		<h2>PUBLISHER</h2>
 	</div>
-	<div class="box" id="box8">
+	<div class="box" onclick="openSecondNav()" id="box8">
 		<h2>LAUNCH</h2>
 	</div>
 

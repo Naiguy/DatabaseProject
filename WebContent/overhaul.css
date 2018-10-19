@@ -83,7 +83,7 @@ h2 {
 	float: left;
 	height: 88%;
 	background-color: #161616;
-	display: hidden;
+	visibility: hidden;
 }
 
 
