@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
 <script type="text/javascript" src="overhaul.js"></script>
 <title>GAMEOVERHAUL</title>
@@ -16,42 +17,48 @@
 <%@ page import="db.*" %>
 
 <div id="Header">
-	<!-- <i id="gamePad" class="fa fa-gamepad" aria-hidden="true"></i> -->
 	<img src="gameoverhaul.png">
 </div>
 
 <div id="sideNav">
 
-	<div class="box" onclick="openSecondNav()" id="box1">
+	<div class="box" onclick="openSystemNav()" id="topBox">
+		<span><i class="far fa-circle half"></i></span>
 		<h2>SYSTEM</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box2">
+	<div class="box" onclick="openGenreNav()" id="genreBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>GENRE</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box3">
+	<div class="box" onclick="openDeveloperNav()" id="developerBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>DEVELOPER</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box4">
-		<h2>PLATFORM</h2>
-	</div>
-	<div class="box" onclick="openSecondNav()" id="box5">
+	<div class="box" onclick="openFranchiseNav()" id="franchiseBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>FRANCHISE</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box6">
+	<div class="box" onclick="openEngineNav()" id="engineBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>ENGINE</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box7">
+	<div class="box" onclick="openPublisherNav()" id="publisherBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>PUBLISHER</h2>
 	</div>
-	<div class="box" onclick="openSecondNav()" id="box8">
+	<div class="box" onclick="openLaunchNav()" id="launchBox">
+	<span><i class="far fa-circle half"></i></span>
 		<h2>LAUNCH</h2>
 	</div>
 
+	<div class="box" onclick="submitPreferences()" id="bottomBox" id="box8">
+		<h2>SUBMIT</h2>
+	</div>
 </div>
 
-<div id="secondaryNav">
+<div id="systemNav">
 	<div class="box" id="box1">
-		<h2>SQL FILL</h2>
+		<h2>SQL FILL SYSTEM</h2>
 	</div>
 	<div class="box" id="box2">
 		<h2>SQL FILL</h2>
@@ -74,13 +81,278 @@
 	<div class="box" id="box8">
 		<h2>SQL FILL</h2>
 	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="genreNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL GENRE</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="developerNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL DEVELOPER</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="franchiseNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL FRANCHISE</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="engineNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL ENGINE</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="publisherNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL PUBLISHER</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
+</div>
+
+<div id="launchNav">
+	<div class="box" id="box1">
+		<h2>SQL FILL LAUNCH</h2>
+	</div>
+	<div class="box" id="box2">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box3">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box4">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box5">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box6">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box7">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box8">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box9">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box10">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box11">
+		<h2>SQL FILL</h2>
+	</div>
+	<div class="box" id="box12">
+		<h2>SQL FILL</h2>
+	</div>
 </div>
 
 <div id="mainContent">
-	
+
 </div>
-
-
 
 
 
