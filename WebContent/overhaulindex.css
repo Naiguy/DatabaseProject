@@ -1,5 +1,5 @@
 body {
-	background-image: url("back1.jpg");
+	background-image: url("photos/back1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -16,9 +16,10 @@ img {
 hr {
 	margin-top: -3%;
 	margin-right: 13%;
-	height: 8px;
-	background-color: orange;
+	height: 6px;
+	background-color: #E8BC2E;
 	animation: slide 3s;
+	margin-left: 40%;
 }
 
 @keyframes slide {
@@ -26,8 +27,9 @@ hr {
   	width: 0%;
   }
   to   { 
-  	width: 45%;
+  	width: 47%;
 
   }
 }
+
 

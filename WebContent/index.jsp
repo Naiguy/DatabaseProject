@@ -17,7 +17,7 @@
 <%@ page import="db.*" %>
 
 <div id="Header">
-	<img src="gameoverhaul.png">
+	<img src="photos/gameoverhaul.png">
 </div>
 
 <div id="sideNav">
