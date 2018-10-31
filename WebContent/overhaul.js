@@ -136,10 +136,7 @@ function openLaunchNav() {
 //PREFERENCE SELECTIONS END ****************************************************************************************
 
 function submitPreferences() {
-	alert("I HAVE NO FUNCTIONALITY YET :D");
+	
 }
-
-
-
 
 

@@ -15,10 +15,8 @@ h2 {
 	margin-top: 0px;
 }
 
-
-
-
 /*HEADER *****************************************************************/
+
 #gamePad {
 	position: absolute;
 	float: left;
@@ -40,10 +38,8 @@ h2 {
 	background-size: cover;
 }
 
-
-
-
 /*NAVBAR *****************************************************************/
+
 #sideNav {
 	z-index: 1;
 	position: absolute;
@@ -51,7 +47,11 @@ h2 {
 	float: left;
 	height: 88%;
 	background-color: #161616;
-	/*margin-top: -2px;*/
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 .box {
@@ -89,13 +89,7 @@ h2 {
 	/*background-color: green;*/
 }
 
-
-
-
 /*SECONDARY SIDE NAVBARS **************************************************/
-
-
-
 
 #systemNav {
 	z-index: 1;
@@ -242,6 +236,128 @@ h2 {
 	background-color: white;
 	color: black;
 }
+
+/*GRID SYSTEM *************************************************************************/
+
+#listOutside {
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.grid {
+	border: 2px solid #093275;
+}
+
+.wrapper { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  grid-auto-rows: 200px; 
+  color: white;
+  border: 2px solid #093275;
+  text-align: center;
+} 
+
+.box1 { 
+  grid-column-start: 1; 
+  grid-column-end: 2; 
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+  border: 2px solid #093275;
+}
+
+.box2 { 
+  grid-column-start: 2; 
+  grid-column-end: 3;
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+  border: 2px solid #093275;
+}
+
+.box3 { 
+  grid-column-start: 3; 
+  grid-column-end: 4;
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+  border: 2px solid #093275;
+}
+
+.box4 { 
+  grid-column-start: 4; 
+  grid-column-end: 5;
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+  border: 2px solid #093275;
+}
+
+.box5 { 
+  grid-column-start: 1; 
+  grid-column-end: 2;
+  grid-row-start: 2; 
+  grid-row-end: 3; 
+  border: 2px solid #093275;
+}
+
+.box6 { 
+  grid-column-start: 2; 
+  grid-column-end: 3;
+  grid-row-start: 2; 
+  grid-row-end: 3; 
+  border: 2px solid #093275;
+}
+
+.box7 { 
+  grid-column-start: 3; 
+  grid-column-end: 4;
+  grid-row-start: 2; 
+  grid-row-end: 3; 
+  border: 2px solid #093275;
+}
+
+.box8 { 
+	text-align: center
+  grid-column-start: 4; 
+  grid-column-end: 5;
+  grid-row-start: 2; 
+  grid-row-end: 3; 
+  border: 2px solid #093275;
+}
+.box9 { 
+  grid-column-start: 1; 
+  grid-column-end: 2;
+  grid-row-start: 3; 
+  grid-row-end: 4; 
+  border: 2px solid #093275;
+}
+.box10 { 
+  grid-column-start: 2; 
+  grid-column-end: 3;
+  grid-row-start: 3; 
+  grid-row-end: 4; 
+  border: 2px solid #093275;
+}
+.box11 { 
+  grid-column-start: 3; 
+  grid-column-end: 4;
+  grid-row-start: 3; 
+  grid-row-end: 4; 
+  border: 2px solid #093275;
+}
+
+.box12 { 
+  grid-column-start: 4; 
+  grid-column-end: 5;
+  grid-row-start: 3; 
+  grid-row-end: 4; 
+  border: 2px solid #093275;
+}
+
+
+
+
+
+
+
 
 
 
