@@ -8,7 +8,6 @@ var launchHidden = true;
 
 //var preferences = [systemHidden, genreHidden, developerHidden, franchiseHidden, engineHidden, publisherHidden, launchHidden];
 
-
 //PREFERENCE SELECTIONS ********************************************************************************************
 
 function navStyleNormal() {
@@ -138,5 +137,3 @@ function openLaunchNav() {
 function submitPreferences() {
 	
 }
-
-
