@@ -15,6 +15,21 @@
 <body>
 <%@ page import="java.io.*" %> 
 <%@ page import="db.*" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.ArrayList" %>
+<%  
+	VideoGame VideoGame = new VideoGame(); 
+
+	ResultSet dev = VideoGame.Developer();
+	ResultSet sys = VideoGame.System();
+	ResultSet gen = VideoGame.Genre();
+	ResultSet fran = VideoGame.Franchise();
+	ResultSet eng = VideoGame.Engine();
+	ResultSet pub = VideoGame.Publisher();
+	ResultSet lau = VideoGame.Launch();
+%>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
@@ -56,328 +71,101 @@
 	</div>
 </div>
 
+
 <div id="systemNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL SYSTEM</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.platList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.platList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="genreNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL GENRE</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.genList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.genList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="developerNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL DEVELOPER</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.devList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.devList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="franchiseNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL FRANCHISE</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.franList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.franList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="engineNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL ENGINE</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.engList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.engList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="publisherNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL PUBLISHER</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.pubList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.pubList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="launchNav">
-	<div class="box" id="box1">
-		<h2>SQL FILL LAUNCH</h2>
-	</div>
-	<div class="box" id="box2">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box3">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box4">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box5">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box6">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box7">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box8">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box9">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box10">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box11">
-		<h2>SQL FILL</h2>
-	</div>
-	<div class="box" id="box12">
-		<h2>SQL FILL</h2>
-	</div>
+<% 
+for(int i=0; i<VideoGame.lauList.size(); i++)
+	{
+	%>
+			<div class="box" id="box<%=i%>">
+				<h2><%= VideoGame.lauList.get(i) %></h2>
+			</div> 
+		<% 
+	}
+%>
 </div>
 
 <div id="mainContent">
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

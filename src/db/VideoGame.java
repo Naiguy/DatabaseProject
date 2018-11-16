@@ -1,6 +1,7 @@
 package db;
 import java.sql.*;
-//lab5
+import java.util.ArrayList;
+
 public class VideoGame {
 	static VideoGame instance = new VideoGame();
 	Connection dbconn;
@@ -9,7 +10,22 @@ public class VideoGame {
 	String dpwd = null;
 	StringBuilder sb = new StringBuilder();
 	
-	//change URL to your database server as needed
+	public String system;
+	public String genre;
+	public String developer;
+	public String franchise;
+	public String engine;
+	public String publisher;
+	public String launch;
+	
+	public ArrayList<String> platList = new ArrayList<String>();
+	public ArrayList<String> devList = new ArrayList<String>();
+	public ArrayList<String> genList = new ArrayList<String>();
+	public ArrayList<String> franList = new ArrayList<String>();
+	public ArrayList<String> engList = new ArrayList<String>();
+	public ArrayList<String> pubList = new ArrayList<String>();
+	public ArrayList<String> lauList = new ArrayList<String>();
+	
 	String dbPath="jdbc:mysql://localhost:3306/project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
 	public static VideoGame getInstance() {
@@ -43,6 +59,165 @@ public class VideoGame {
 		return null;
 	}
 	
+	public ResultSet System() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select platformName from project.Platform");
+			ResultSet results;
+			results=sql.executeQuery("Select platformName from project.Platform");
+			System.out.println("query="+"Select platformName from project.Platform");
+			while (results.next()) {
+				system = results.getString("platformName");
+				platList.add(system);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Genre() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select genreName from project.Genre");
+			ResultSet results;
+			results=sql.executeQuery("Select genreName from project.Genre");
+			System.out.println("query="+"Select genreName from project.Genre");
+			while (results.next()) {
+				genre = results.getString("genreName");
+				genList.add(genre);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Developer() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select Name from project.Developer");
+			ResultSet results;
+			results=sql.executeQuery("Select Name from project.Developer");
+			System.out.println("query="+"Select Name from project.Developer");
+			while (results.next()) {
+				System.out.println(i);
+				developer = results.getString("Name");
+				devList.add(developer);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Franchise() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select franchiseName from project.Franchise");
+			ResultSet results;
+			results=sql.executeQuery("Select franchiseName from project.Franchise");
+			System.out.println("query="+"Select franchiseName from project.Franchise");
+			while (results.next()) {
+				System.out.println(i);
+				franchise = results.getString("franchiseName");
+				franList.add(franchise);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Engine() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select engineName from project.Engine");
+			ResultSet results;
+			results=sql.executeQuery("Select engineName from project.Engine");
+			System.out.println("query="+"Select engineName from project.Engine");
+			while (results.next()) {
+				System.out.println(i);
+				engine = results.getString("engineName");
+				engList.add(engine);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Publisher() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select publisherName from project.Publisher");
+			ResultSet results;
+			results=sql.executeQuery("Select publisherName from project.Publisher");
+			System.out.println("query="+"Select publisherName from project.Publisher");
+			while (results.next()) {
+				System.out.println(i);
+				publisher = results.getString("publisherName");
+				pubList.add(publisher);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+	
+	public ResultSet Launch() {
+		int i=0;
+		try {
+			dbconn=instance.newConnection();
+			sql=dbconn.prepareStatement("Select launchID from project.Launch");
+			ResultSet results;
+			results=sql.executeQuery("Select launchID from project.Launch");
+			System.out.println("query="+"Select launchID from project.Launch");
+			while (results.next()) {
+				System.out.println(i);
+				launch = results.getString("launchID");
+				lauList.add(launch);
+				i++;
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3");
+		}
+		return results;
+	}
+		
 	public ResultSet selectStatement( String query ) {
 		try {
 			
@@ -50,7 +225,6 @@ public class VideoGame {
 			sql=dbconn.prepareStatement(query);
 			ResultSet results;
 			results=sql.executeQuery();
-			//System.out.println("query="+query);
 			
 			dbconn.close();
 			return results;
@@ -62,34 +236,43 @@ public class VideoGame {
 		}
 	}
 
-	public boolean DBentry( String query ) {
-		try {
-			System.out.println("query="+query);
-			instance.newConnection();
-			sql=dbconn.prepareStatement(query);
-			sql.executeUpdate(query);
-			dbconn.close();
-			return true;
-		}
-		catch ( Exception err ) {
-			err.getStackTrace();
-			System.out.println(err.getMessage().toString());
-			System.out.println("catch 4");
-			return false;
-		}
-	}
-	
-//	public boolean entry(String itemnumber, String price, String firstname, String lastname, String address, String cctype, String ccnum ) {
+//public boolean userlookup(String user, String pass) throws SQLException {
+//		
 //		try {
-//			instance.DBentry("INSERT INTO cs485_lab.BusinessOrders ( `itemnumber`, `price`, 'firstname', 'lastname', 'address', 'cctype', 'ccnum') " +
-//								"VALUES ( '"+itemnumber+"' ,'"+price+"' ,'"+firstname+"' ,'"+lastname+"' ,'"+address+"' ,'"+cctype+"' ,'"+ccnum+"');");	
-//			return true;
+//			dbconn=instance.newConnection();
+//			sql=dbconn.prepareStatement("Select * from cs485_lab.User_Account");
+//			ResultSet results;
+//			results=sql.executeQuery("Select * from cs485_lab.User_Account");
+//			System.out.println("query="+"Select * from cs485_lab.User_Account");
+//			while (results.next()) {
+//				Username = results.getString("User");
+//				Password = results.getString("Password");
+//				System.out.println("DB Uname = " +Username);
+//				System.out.println("DB Pword = " +Password);
+//				System.out.println("Uname = " +user);
+//				System.out.println("Pword = " +pass);
+//				if ((user.equals(Username)) && (pass.equals(Password)))
+//				{
+//					status = true;
+//				}
+//				else {
+//					status = false;
+//				}
+//				if (status == true) {
+//					break;
+//				}
+//			}
+//			dbconn.close();
 //		}
-//		catch ( Exception err ) {
-//			err.getStackTrace();
-//			System.out.println("catch 5");
-//			return false;
+//		catch (Exception err) {
+//			System.out.println(err.getMessage());
+//			System.out.println("catch 3");
+//			
 //		}
+//		
+//		System.out.println(user + " " + pass);
+//		
+//		return status;
 //	}
 	
 	public static void main(String[] args) {	
