@@ -352,12 +352,34 @@ a {
   border: 2px solid #093275;
 }
 
+/*LIST PAGE LAYOUT *********************************************************************************/
 
+#ListBody {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 10vw 30vw 10vw;
+  grid-gap: 1em;
+}
 
+footer {
+  grid-column: 1 / span 2;
+}
 
+/* Demo Specific Styles */
+#ListBody {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
 
-
-
+main,
+aside,
+footer {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 

@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
 <script type="text/javascript" src="overhaul.js"></script>
-<title>**GAME**</title>
+<title>GAME</title>
 </head>
 <body>
 
@@ -18,21 +18,19 @@
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
+<div id="ListBody">
 
+	<main>
+	  Main
+	</main>
+	<aside>
+	  Sidebar
+	</aside>
+	<footer>
+	  Footer
+	</footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 

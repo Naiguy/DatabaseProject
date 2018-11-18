@@ -71,7 +71,6 @@
 	</div>
 </div>
 
-
 <div id="systemNav">
 <% 
 for(int i=0; i<VideoGame.platList.size(); i++)
