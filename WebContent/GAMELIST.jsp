@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="photos/icon.png">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
 <script type="text/javascript" src="overhaul.js"></script>
 <title>SELECT A GAME</title>

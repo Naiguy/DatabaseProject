@@ -5,6 +5,14 @@ var franchiseHidden = true;
 var engineHidden = true;
 var publisherHidden = true;
 var launchHidden = true;
+var boxNumber;
+var systemtemp;
+var genretemp;
+var devtemp;
+var frantemp;
+var enginetemp;
+var pubtemp;
+var launchtemp;
 
 //var preferences = [systemHidden, genreHidden, developerHidden, franchiseHidden, engineHidden, publisherHidden, launchHidden];
 
@@ -130,6 +138,99 @@ function openLaunchNav() {
 		document.getElementById("launchNav").style.visibility = "hidden";
 		launchHidden = true;
 	}
+}
+
+//SUB PREFERENCE SELECTIONS ****************************************************************************************
+
+function selectSystem(boxNumber) {
+	if (systemtemp != null) {
+		document.getElementById(systemtemp).style.backgroundColor = "#161616";
+		document.getElementById(systemtemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("systembox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("systembox"+boxNumber).style.color = "black";
+	document.getElementById("systemLight").style.backgroundColor = "#0F7F12";
+	document.getElementById("systemLight").style.borderRadius = "5px";
+	systemtemp = ("systembox" + boxNumber);
+}
+
+function selectGenre(boxNumber) {
+	if (genretemp != null) {
+		document.getElementById(genretemp).style.backgroundColor = "#161616";
+		document.getElementById(genretemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("genrebox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("genrebox"+boxNumber).style.color = "black";
+	document.getElementById("genreLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("genreLight").style.borderRadius = "5px";
+	genretemp = ("genrebox" + boxNumber);
+}
+
+function selectDeveloper(boxNumber) {
+	if (devtemp != null) {
+		document.getElementById(devtemp).style.backgroundColor = "#161616";
+		document.getElementById(devtemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("developerbox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("developerbox"+boxNumber).style.color = "black";
+	document.getElementById("developerLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("developerLight").style.borderRadius = "5px";
+	devtemp = ("developerbox" + boxNumber);
+}
+
+function selectFranchise(boxNumber) {
+	if (frantemp != null) {
+		document.getElementById(frantemp).style.backgroundColor = "#161616";
+		document.getElementById(frantemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("franchisebox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("franchisebox"+boxNumber).style.color = "black";
+	document.getElementById("franchiseLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("franchiseLight").style.borderRadius = "5px";
+	frantemp = ("franchisebox" + boxNumber);
+}
+
+function selectEngine(boxNumber) {
+	if (enginetemp != null) {
+		document.getElementById(enginetemp).style.backgroundColor = "#161616";
+		document.getElementById(enginetemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("enginebox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("enginebox"+boxNumber).style.color = "black";
+	document.getElementById("engineLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("engineLight").style.borderRadius = "5px";
+	enginetemp = ("enginebox" + boxNumber);
+}
+
+function selectPublisher(boxNumber) {
+	if (pubtemp != null) {
+		document.getElementById(pubtemp).style.backgroundColor = "#161616";
+		document.getElementById(pubtemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("publisherbox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("publisherbox"+boxNumber).style.color = "black";
+	document.getElementById("publisherLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("publisherLight").style.borderRadius = "5px";
+	pubtemp = ("publisherbox" + boxNumber);
+}
+
+function selectLaunch(boxNumber) {
+	if (launchtemp != null) {
+		document.getElementById(launchtemp).style.backgroundColor = "#161616";
+		document.getElementById(launchtemp).style.color = "#827F7F";
+	}
+
+	document.getElementById("launchbox"+boxNumber).style.backgroundColor = "white";
+	document.getElementById("launchbox"+boxNumber).style.color = "black";
+	document.getElementById("launchLight").style.backgroundColor = "#0F7F12"
+	document.getElementById("launchLight").style.borderRadius = "5px";
+	launchtemp = ("launchbox" + boxNumber);
 }
 
 //PREFERENCE SELECTIONS END ****************************************************************************************
