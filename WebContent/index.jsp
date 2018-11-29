@@ -171,8 +171,6 @@ for(int i=0; i<VideoGame.lauList.size(); i++)
 
 
 
-
-
 <!-- <form  action="index.jsp" method="get">
 
   Item Number:

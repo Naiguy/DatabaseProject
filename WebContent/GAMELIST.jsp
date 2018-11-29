@@ -22,14 +22,20 @@
 
 <div id="listOutside">
 	<div class="wrapper">
+	
+	
+	
 	<!-- loop -->
 	  <div class="box1" class="grid">
 	  	one 
 	  	<!--<p> array[3].prop </p>  -->
 	  	<!-- <a href={ array[4].prop}>  -->
 	  </div>
-	<!--  -->
-	  <div class="box2" class="grid">Two</div>
+	  
+	  
+	  
+	  
+	  <!-- <div class="box2" class="grid">Two</div>
 	  <div class="box3" class="grid">Three</div>
 	  <div class="box4" class="grid">Four</div>
 	  <div class="box5" class="grid">Five</div>
@@ -39,7 +45,7 @@
 	  <div class="box9" class="grid">Nine</div>
 	  <div class="box10" class="grid">Ten</div>
 	  <div class="box11" class="grid">Eleven</div>
-	  <div class="box12" class="grid">Twelve</div>
+	  <div class="box12" class="grid">Twelve</div> -->
 	</div>
 </div>
 

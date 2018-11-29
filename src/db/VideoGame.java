@@ -60,7 +60,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet System() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct platformName from project.Platform");
@@ -70,7 +69,6 @@ public class VideoGame {
 			while (results.next()) {
 				system = results.getString("platformName");
 				platList.add(system);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -82,7 +80,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Genre() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct genreName from project.Genre");
@@ -92,7 +89,6 @@ public class VideoGame {
 			while (results.next()) {
 				genre = results.getString("genreName");
 				genList.add(genre);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -104,7 +100,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Developer() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct devName from project.Developer");
@@ -114,7 +109,6 @@ public class VideoGame {
 			while (results.next()) {
 				developer = results.getString("devName");
 				devList.add(developer);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -126,7 +120,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Franchise() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct franchiseName from project.Franchise");
@@ -136,7 +129,6 @@ public class VideoGame {
 			while (results.next()) {
 				franchise = results.getString("franchiseName");
 				franList.add(franchise);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -148,7 +140,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Engine() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct engineName from project.Engine");
@@ -158,7 +149,6 @@ public class VideoGame {
 			while (results.next()) {
 				engine = results.getString("engineName");
 				engList.add(engine);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -170,7 +160,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Publisher() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct pubName from project.Publisher");
@@ -180,7 +169,6 @@ public class VideoGame {
 			while (results.next()) {
 				publisher = results.getString("pubName");
 				pubList.add(publisher);
-				i++;
 			}
 			dbconn.close();
 		}
@@ -192,7 +180,6 @@ public class VideoGame {
 	}
 	
 	public ResultSet Launch() {
-		int i=0;
 		try {
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement("Select distinct launchDate from project.launchDate");
@@ -202,7 +189,6 @@ public class VideoGame {
 			while (results.next()) {
 				launch = results.getString("launchDate");
 				lauList.add(launch);
-				i++;
 			}
 			dbconn.close();
 		}
