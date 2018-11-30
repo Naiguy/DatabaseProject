@@ -20,17 +20,7 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
-<%  
-	VideoGame VideoGame = new VideoGame(); 
-
-	ResultSet dev = VideoGame.Developer();
-	ResultSet sys = VideoGame.System();
-	ResultSet gen = VideoGame.Genre();
-	ResultSet fran = VideoGame.Franchise();
-	ResultSet eng = VideoGame.Engine();
-	ResultSet pub = VideoGame.Publisher();
-	ResultSet lau = VideoGame.Launch();
-%>
+<%  VideoGame VideoGame = new VideoGame(); %>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">

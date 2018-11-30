@@ -15,6 +15,11 @@
 
 <%@ page import="java.io.*" %> 
 <%@ page import="db.*" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.ArrayList" %>
+<%  VideoGame VideoGame = new VideoGame(); %>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
@@ -25,14 +30,19 @@
 	
 	
 	
-	
 	<!-- loop -->
 	  <div class="box" class="grid">
-	  	one 
-	  	<!-- <p> array[3].prop </p>  --> 
-	  	<!-- <a href={ array[4].prop}>  --> 
+	  	<% 
+			for(int i=0; i<VideoGame.gameList.size(); i++)
+			{
+		%>
+				<div class="box" id="gamebox<%=i%>" onclick="selectEngine(<%=i%>)">
+					<h2><%= VideoGame.gameList.get(i) %></h2>
+				</div> 
+		<% 
+			}
+		%>
 	  </div>
-	 
 	 
 	 
 	 	
