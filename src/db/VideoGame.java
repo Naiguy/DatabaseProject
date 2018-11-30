@@ -71,6 +71,7 @@ public class VideoGame {
 			while (results.next()) {
 				system = results.getString("platformName");
 				platList.add(system);
+				System.out.println(system);
 			}
 			dbconn.close();
 		}

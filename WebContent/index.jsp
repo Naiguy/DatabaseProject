@@ -16,11 +16,21 @@
 <body>
 <%@ page import="java.io.*" %> 
 <%@ page import="db.*" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
-<%  VideoGame VideoGame = new VideoGame(); %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+
+<%  
+VideoGame VideoGame = new VideoGame(); 
+ResultSet dev = VideoGame.Developer();
+ResultSet sys = VideoGame.System();
+ResultSet gen = VideoGame.Genre();
+ResultSet fran = VideoGame.Franchise();
+ResultSet eng = VideoGame.Engine();
+ResultSet pub = VideoGame.Publisher();
+ResultSet lau = VideoGame.Launch();
+%>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
@@ -66,6 +76,7 @@
 <% 
 for(int i=0; i<VideoGame.platList.size(); i++)
 	{
+	System.out.println(VideoGame.platList.get(i));
 	%>
 			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)">
 				<h2><%= VideoGame.platList.get(i) %></h2>
