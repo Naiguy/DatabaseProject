@@ -224,7 +224,6 @@ public class VideoGame {
 	}
 	
 	public static void main(String[] args) {	
-		//instance.entry("1234", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf");
-		instance.selectStatement("Select * from Developer");
+		instance.selectStatement("Select * from Game");
 	}
 }
