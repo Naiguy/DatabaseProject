@@ -17,6 +17,7 @@ public class VideoGame {
 	public String engine;
 	public String publisher;
 	public String launch;
+	public String game;
 	
 	public ArrayList<String> platList = new ArrayList<String>();
 	public ArrayList<String> devList = new ArrayList<String>();
@@ -25,6 +26,7 @@ public class VideoGame {
 	public ArrayList<String> engList = new ArrayList<String>();
 	public ArrayList<String> pubList = new ArrayList<String>();
 	public ArrayList<String> lauList = new ArrayList<String>();
+	public ArrayList<String> gameList = new ArrayList<String>();
 	
 	String dbPath="jdbc:mysql://localhost:3306/project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
@@ -206,6 +208,11 @@ public class VideoGame {
 			sql=dbconn.prepareStatement(query);
 			ResultSet results;
 			results=sql.executeQuery();
+			while(results.next()) {
+				game = results.getString("gameTitle");
+				gameList.add(game);
+				System.out.println(game);
+			}
 			
 			dbconn.close();
 			return results;
