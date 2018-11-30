@@ -20,7 +20,7 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
 <%  VideoGame VideoGame = new VideoGame(); %>
-
+<%  ResultSet game = VideoGame.selectStatement("Select * from Game"); %> 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
@@ -37,21 +37,19 @@
 			for(int i=0; i<VideoGame.gameList.size(); i++)
 			{
 		%>
-				<div class="box" id="gamebox<%=i%>" onclick="selectEngine(<%=i%>)">
+				<div class="box" id="gamebox<%=i%>" <%-- onclick="selectEngine(<%=i%>)" --%>>
 					<h2><%= VideoGame.gameList.get(i) %></h2>
 				</div> 
 		<% 
 			}
 		%> 
 	  </div>
-	 
-	 
 
-	  <div class="box1" class="grid">
-	  	one 
-	  	<!--<p> array[3].prop </p>  -->
-	  	<!-- <a href={ array[4].prop}>  -->
-	  </div>
+<!--	<div class="box1" class="grid">
+	  		one 
+	  		<p> array[3].prop </p> 
+	  		<a href={ array[4].prop}> 
+	 	</div> -->
 
 	</div>
 </div>

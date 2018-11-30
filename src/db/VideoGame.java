@@ -212,7 +212,6 @@ public class VideoGame {
 			while(results.next()) {
 				game = results.getString("gameTitle");
 				gameList.add(game);
-				System.out.println(game);
 			}
 			
 			dbconn.close();

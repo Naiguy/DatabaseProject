@@ -30,7 +30,7 @@ ResultSet fran = VideoGame.Franchise();
 ResultSet eng = VideoGame.Engine();
 ResultSet pub = VideoGame.Publisher();
 ResultSet lau = VideoGame.Launch();
-ResultSet game = VideoGame.selectStatement("Select * from Game"); 
+//ResultSet game = VideoGame.selectStatement("Select * from Game"); 
 %>
 
 <div id="Header">
