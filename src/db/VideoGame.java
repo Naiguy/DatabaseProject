@@ -213,7 +213,6 @@ public class VideoGame {
 				gameList.add(game);
 				System.out.println(game);
 			}
-			
 			dbconn.close();
 			return results;
 		}
@@ -223,45 +222,6 @@ public class VideoGame {
 			return null;
 		}
 	}
-
-//public boolean userlookup(String user, String pass) throws SQLException {
-//		
-//		try {
-//			dbconn=instance.newConnection();
-//			sql=dbconn.prepareStatement("Select * from cs485_lab.User_Account");
-//			ResultSet results;
-//			results=sql.executeQuery("Select * from cs485_lab.User_Account");
-//			System.out.println("query="+"Select * from cs485_lab.User_Account");
-//			while (results.next()) {
-//				Username = results.getString("User");
-//				Password = results.getString("Password");
-//				System.out.println("DB Uname = " +Username);
-//				System.out.println("DB Pword = " +Password);
-//				System.out.println("Uname = " +user);
-//				System.out.println("Pword = " +pass);
-//				if ((user.equals(Username)) && (pass.equals(Password)))
-//				{
-//					status = true;
-//				}
-//				else {
-//					status = false;
-//				}
-//				if (status == true) {
-//					break;
-//				}
-//			}
-//			dbconn.close();
-//		}
-//		catch (Exception err) {
-//			System.out.println(err.getMessage());
-//			System.out.println("catch 3");
-//			
-//		}
-//		
-//		System.out.println(user + " " + pass);
-//		
-//		return status;
-//	}
 	
 	public static void main(String[] args) {	
 		//instance.entry("1234", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf");
