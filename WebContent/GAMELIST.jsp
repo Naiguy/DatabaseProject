@@ -45,12 +45,6 @@
 		%> 
 	  </div>
 
-<!--	<div class="box1" class="grid">
-	  		one 
-	  		<p> array[3].prop </p> 
-	  		<a href={ array[4].prop}> 
-	 	</div> -->
-
 	</div>
 </div>
 

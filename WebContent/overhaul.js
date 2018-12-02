@@ -5,7 +5,9 @@ var franchiseHidden = true;
 var engineHidden = true;
 var publisherHidden = true;
 var launchHidden = true;
+
 var boxNumber;
+
 var systemtemp;
 var genretemp;
 var devtemp;
@@ -14,7 +16,13 @@ var enginetemp;
 var pubtemp;
 var launchtemp;
 
-//var preferences = [systemHidden, genreHidden, developerHidden, franchiseHidden, engineHidden, publisherHidden, launchHidden];
+var queryPlatform;
+var queryGenre;
+var queryDeveloper;
+var queryFranchise;
+var queryEngine;
+var queryPublisher;
+var queryLaunch;
 
 //PREFERENCE SELECTIONS ********************************************************************************************
 
@@ -153,22 +161,25 @@ function selectSystem(boxNumber) {
 	document.getElementById("systemLight").style.backgroundColor = "#0F7F12";
 	document.getElementById("systemLight").style.borderRadius = "5px";
 	systemtemp = ("systembox" + boxNumber);
+	queryPlatform = document.getElementById("plat"+boxNumber).textContent;
+	alert(queryPlatform);
+	console.log(queryPlatform);
 }
 
-function selectGenre(boxNumber, item) {
+function selectGenre(boxNumber) {
 	if (genretemp != null) {
 		document.getElementById(genretemp).style.backgroundColor = "#161616";
 		document.getElementById(genretemp).style.color = "#827F7F";
 	}
-	alert("hasdf");
-	console.log(boxNumber);
-	console.log(item);
 
 	document.getElementById("genrebox"+boxNumber).style.backgroundColor = "white";
 	document.getElementById("genrebox"+boxNumber).style.color = "black";
 	document.getElementById("genreLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("genreLight").style.borderRadius = "5px";
 	genretemp = ("genrebox" + boxNumber);
+	queryGenre = document.getElementById("gen"+boxNumber).textContent;
+	alert(queryGenre);
+	console.log(queryGenre);
 }
 
 function selectDeveloper(boxNumber) {
@@ -182,6 +193,8 @@ function selectDeveloper(boxNumber) {
 	document.getElementById("developerLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("developerLight").style.borderRadius = "5px";
 	devtemp = ("developerbox" + boxNumber);
+	queryDeveloper = document.getElementById("dev"+boxNumber).textContent;
+	alert(queryDeveloper);
 }
 
 function selectFranchise(boxNumber) {
@@ -195,6 +208,8 @@ function selectFranchise(boxNumber) {
 	document.getElementById("franchiseLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("franchiseLight").style.borderRadius = "5px";
 	frantemp = ("franchisebox" + boxNumber);
+	queryFranchise = document.getElementById("fran"+boxNumber).textContent;
+	alert(queryFranchise);
 }
 
 function selectEngine(boxNumber) {
@@ -208,6 +223,8 @@ function selectEngine(boxNumber) {
 	document.getElementById("engineLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("engineLight").style.borderRadius = "5px";
 	enginetemp = ("enginebox" + boxNumber);
+	queryEngine = document.getElementById("eng"+boxNumber).textContent;
+	alert(queryEngine);
 }
 
 function selectPublisher(boxNumber) {
@@ -221,6 +238,8 @@ function selectPublisher(boxNumber) {
 	document.getElementById("publisherLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("publisherLight").style.borderRadius = "5px";
 	pubtemp = ("publisherbox" + boxNumber);
+	queryPublisher = document.getElementById("pub"+boxNumber).textContent;
+	alert(queryPublisher);
 }
 
 function selectLaunch(boxNumber) {
@@ -234,9 +253,9 @@ function selectLaunch(boxNumber) {
 	document.getElementById("launchLight").style.backgroundColor = "#0F7F12"
 	document.getElementById("launchLight").style.borderRadius = "5px";
 	launchtemp = ("launchbox" + boxNumber);
+	queryLaunch = document.getElementById("Lau"+boxNumber).textContent;
+	alert(queryLaunch);
 }
-
-
 
 //PREFERENCE SELECTIONS END ****************************************************************************************
 

@@ -83,10 +83,9 @@ ResultSet lau = VideoGame.Launch();
 <% 
 for(int i=0; i<VideoGame.platList.size(); i++)
 	{
-	System.out.println(VideoGame.platList.get(i));
 	%>
 			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)">
-				<h2><%= VideoGame.platList.get(i) %></h2>
+				<h2 id="plat<%=i%>"><%= VideoGame.platList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -98,8 +97,8 @@ for(int i=0; i<VideoGame.platList.size(); i++)
 for(int i=0; i<VideoGame.genList.size(); i++)
 	{
 	%>
-			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>, <%=VideoGame.genList.get(i)%>)">
-				<h2><%= VideoGame.genList.get(i) %></h2>
+			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>)">
+				<h2 id="gen<%=i%>"><%= VideoGame.genList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -111,8 +110,8 @@ for(int i=0; i<VideoGame.genList.size(); i++)
 for(int i=0; i<VideoGame.devList.size(); i++)
 	{
 	%>
-			<div class="box" id="developerbox<%=i%>" onclick="selectDeveloper(<%=i%>)" id="<%=VideoGame.devList.get(i)%>">
-				<h2><%= VideoGame.devList.get(i) %></h2>
+			<div class="box" id="developerbox<%=i%>" onclick="selectDeveloper(<%=i%>)">
+				<h2 id="dev<%=i%>"><%= VideoGame.devList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -124,8 +123,8 @@ for(int i=0; i<VideoGame.devList.size(); i++)
 for(int i=0; i<VideoGame.franList.size(); i++)
 	{
 	%>
-			<div class="box" id="franchisebox<%=i%>" onclick="selectFranchise(<%=i%>)" id="<%=VideoGame.franList.get(i)%>">
-				<h2><%= VideoGame.franList.get(i) %></h2>
+			<div class="box" id="franchisebox<%=i%>" onclick="selectFranchise(<%=i%>)">
+				<h2 id="fran<%=i%>"><%= VideoGame.franList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -137,8 +136,8 @@ for(int i=0; i<VideoGame.franList.size(); i++)
 for(int i=0; i<VideoGame.engList.size(); i++)
 	{
 	%>
-			<div class="box" id="enginebox<%=i%>" onclick="selectEngine(<%=i%>)" id="<%=VideoGame.engList.get(i)%>">
-				<h2><%= VideoGame.engList.get(i) %></h2>
+			<div class="box" id="enginebox<%=i%>" onclick="selectEngine(<%=i%>)">
+				<h2 id="eng<%=i%>"><%= VideoGame.engList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -150,8 +149,8 @@ for(int i=0; i<VideoGame.engList.size(); i++)
 for(int i=0; i<VideoGame.pubList.size(); i++)
 	{
 	%>
-			<div class="box" id="publisherbox<%=i%>" onclick="selectPublisher(<%=i%>)" id="<%=VideoGame.pubList.get(i)%>">
-				<h2><%= VideoGame.pubList.get(i) %></h2>
+			<div class="box" id="publisherbox<%=i%>" onclick="selectPublisher(<%=i%>)">
+				<h2 id="pub<%=i%>"><%= VideoGame.pubList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -163,8 +162,8 @@ for(int i=0; i<VideoGame.pubList.size(); i++)
 for(int i=0; i<VideoGame.lauList.size(); i++)
 	{
 	%>
-			<div class="box" id="launchbox<%=i%>" onclick="selectLaunch(<%=i%>)" id="<%=VideoGame.lauList.get(i)%>">
-				<h2><%= VideoGame.lauList.get(i) %></h2>
+			<div class="box" id="launchbox<%=i%>" onclick="selectLaunch(<%=i%>)">
+				<h2 id="lau<%=i%>"><%= VideoGame.lauList.get(i) %></h2>
 			</div> 
 		<% 
 	}
@@ -174,8 +173,6 @@ for(int i=0; i<VideoGame.lauList.size(); i++)
 <div id="mainContent">
 
 </div>
-
-
 
 </body>
 </html>
