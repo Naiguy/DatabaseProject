@@ -6,11 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <link rel="icon" href="photos/icon.png">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
 <script type="text/javascript" src="overhaul.js"></script>
+<script type="text/javascript" src="filters.js"></script>
 <title>GAMEOVERHAUL</title>
 </head>
 <body>
@@ -21,8 +26,9 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 
-<%  
-VideoGame VideoGame = new VideoGame(); 
+<%
+VideoGame VideoGame = new VideoGame();
+FilterCreator FC = new FilterCreator();
 ResultSet dev = VideoGame.Developer();
 ResultSet sys = VideoGame.System();
 ResultSet gen = VideoGame.Genre();
@@ -79,7 +85,7 @@ for(int i=0; i<VideoGame.platList.size(); i++)
 	{
 	System.out.println(VideoGame.platList.get(i));
 	%>
-			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)">
+			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)" id="3ed3ed<%=VideoGame.platList.get(i)%>">
 				<h2><%= VideoGame.platList.get(i) %></h2>
 			</div> 
 		<% 
@@ -92,7 +98,7 @@ for(int i=0; i<VideoGame.platList.size(); i++)
 for(int i=0; i<VideoGame.genList.size(); i++)
 	{
 	%>
-			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>)">
+			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>)" id="<%=VideoGame.genList.get(i)%>">
 				<h2><%= VideoGame.genList.get(i) %></h2>
 			</div> 
 		<% 
@@ -105,7 +111,7 @@ for(int i=0; i<VideoGame.genList.size(); i++)
 for(int i=0; i<VideoGame.devList.size(); i++)
 	{
 	%>
-			<div class="box" id="developerbox<%=i%>" onclick="selectDeveloper(<%=i%>)">
+			<div class="box" id="developerbox<%=i%>" onclick="selectDeveloper(<%=i%>)" id="<%=VideoGame.devList.get(i)%>">
 				<h2><%= VideoGame.devList.get(i) %></h2>
 			</div> 
 		<% 
@@ -118,7 +124,7 @@ for(int i=0; i<VideoGame.devList.size(); i++)
 for(int i=0; i<VideoGame.franList.size(); i++)
 	{
 	%>
-			<div class="box" id="franchisebox<%=i%>" onclick="selectFranchise(<%=i%>)">
+			<div class="box" id="franchisebox<%=i%>" onclick="selectFranchise(<%=i%>)" id="<%=VideoGame.franList.get(i)%>">
 				<h2><%= VideoGame.franList.get(i) %></h2>
 			</div> 
 		<% 
@@ -131,7 +137,7 @@ for(int i=0; i<VideoGame.franList.size(); i++)
 for(int i=0; i<VideoGame.engList.size(); i++)
 	{
 	%>
-			<div class="box" id="enginebox<%=i%>" onclick="selectEngine(<%=i%>)">
+			<div class="box" id="enginebox<%=i%>" onclick="selectEngine(<%=i%>)" id="<%=VideoGame.engList.get(i)%>">
 				<h2><%= VideoGame.engList.get(i) %></h2>
 			</div> 
 		<% 
@@ -144,7 +150,7 @@ for(int i=0; i<VideoGame.engList.size(); i++)
 for(int i=0; i<VideoGame.pubList.size(); i++)
 	{
 	%>
-			<div class="box" id="publisherbox<%=i%>" onclick="selectPublisher(<%=i%>)">
+			<div class="box" id="publisherbox<%=i%>" onclick="selectPublisher(<%=i%>)" id="<%=VideoGame.pubList.get(i)%>">
 				<h2><%= VideoGame.pubList.get(i) %></h2>
 			</div> 
 		<% 
@@ -157,7 +163,7 @@ for(int i=0; i<VideoGame.pubList.size(); i++)
 for(int i=0; i<VideoGame.lauList.size(); i++)
 	{
 	%>
-			<div class="box" id="launchbox<%=i%>" onclick="selectLaunch(<%=i%>)">
+			<div class="box" id="launchbox<%=i%>" onclick="selectLaunch(<%=i%>)" id="<%=VideoGame.lauList.get(i)%>">
 				<h2><%= VideoGame.lauList.get(i) %></h2>
 			</div> 
 		<% 

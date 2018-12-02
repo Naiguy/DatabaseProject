@@ -2,7 +2,7 @@ package db;
 
 public class FilterCreator {
 	
-	FilterCreator() {}
+	public FilterCreator() {}
 	
 	
 	
@@ -14,30 +14,30 @@ public class FilterCreator {
 	String year = null;
 	String engine = null;
 	
-	boolean hasFranchise = false;
-	boolean hasPlatform = false;
-	boolean hasDeveloper = false;
-	boolean hasPublisher = false;
-	boolean hasGenre = false;
-	boolean hasYear = false;
-	boolean hasEngine = false;
+	public 	boolean hasFranchise = false;
+	public 	boolean hasPlatform = false;
+	public boolean hasDeveloper = false;
+	public boolean hasPublisher = false;
+	public boolean hasGenre = false;
+	public 	boolean hasYear = false;
+	public boolean hasEngine = false;
 	
 	
-	String getFranchise() {return franchise;}
-	String getPlatform() {return platform;}
-	String getDeveloper() {return developer;}
-	String getPublisher() {return publisher;}
-	String getGenre() {return genre;}
-	String getYear() {return year;}
-	String getEngine() {return engine;}
+	public 	String getFranchise() {return franchise;}
+	public String getPlatform() {return platform;}
+	public String getDeveloper() {return developer;}
+	public String getPublisher() {return publisher;}
+	public String getGenre() {return genre;}
+	public String getYear() {return year;}
+	public String getEngine() {return engine;}
 	
-	void setFranchise (String selection) {franchise = selection;}
-	void setPlatform (String selection) {platform = selection;}
-	void setDeveloper (String selection) {developer = selection;}
-	void setPublisher (String selection) {publisher = selection;}
-	void setGenre (String selection) {genre = selection;}
-	void setYear (String selection) {year = selection;}
-	void setEngine (String selection) {engine = selection;}
+	public void setFranchise (String selection) {franchise = selection;}
+	public void setPlatform (String selection) {platform = selection;}
+	public void setDeveloper (String selection) {developer = selection;}
+	public void setPublisher (String selection) {publisher = selection;}
+	public void setGenre (String selection) {genre = selection;}
+	public void setYear (String selection) {year = selection;}
+	public void setEngine (String selection) {engine = selection;}
 	
 	public void printCurrentFilter() {
 		System.out.println("franchise = " + franchise);
