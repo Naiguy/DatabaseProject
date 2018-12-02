@@ -155,11 +155,14 @@ function selectSystem(boxNumber) {
 	systemtemp = ("systembox" + boxNumber);
 }
 
-function selectGenre(boxNumber) {
+function selectGenre(boxNumber, item) {
 	if (genretemp != null) {
 		document.getElementById(genretemp).style.backgroundColor = "#161616";
 		document.getElementById(genretemp).style.color = "#827F7F";
 	}
+	alert("hasdf");
+	console.log(boxNumber);
+	console.log(item);
 
 	document.getElementById("genrebox"+boxNumber).style.backgroundColor = "white";
 	document.getElementById("genrebox"+boxNumber).style.color = "black";
@@ -232,6 +235,8 @@ function selectLaunch(boxNumber) {
 	document.getElementById("launchLight").style.borderRadius = "5px";
 	launchtemp = ("launchbox" + boxNumber);
 }
+
+
 
 //PREFERENCE SELECTIONS END ****************************************************************************************
 

@@ -85,7 +85,7 @@ for(int i=0; i<VideoGame.platList.size(); i++)
 	{
 	System.out.println(VideoGame.platList.get(i));
 	%>
-			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)" id="3ed3ed<%=VideoGame.platList.get(i)%>">
+			<div class="box" id="systembox<%=i%>" onclick="selectSystem(<%=i%>)">
 				<h2><%= VideoGame.platList.get(i) %></h2>
 			</div> 
 		<% 
@@ -98,7 +98,7 @@ for(int i=0; i<VideoGame.platList.size(); i++)
 for(int i=0; i<VideoGame.genList.size(); i++)
 	{
 	%>
-			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>)" id="<%=VideoGame.genList.get(i)%>">
+			<div class="box" id="genrebox<%=i%>" onclick="selectGenre(<%=i%>, <%=VideoGame.genList.get(i)%>)">
 				<h2><%= VideoGame.genList.get(i) %></h2>
 			</div> 
 		<% 
