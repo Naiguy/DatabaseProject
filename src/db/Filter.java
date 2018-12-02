@@ -35,7 +35,6 @@ public class Filter {
 		if (year != null) hasYear = true;
 		if (engine != null) hasEngine = true;
 		System.out.println("finished to create filter");
-		
 	}
 	
 	String beginning = "select distinct game.gameTitle from ";

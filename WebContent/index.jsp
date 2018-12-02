@@ -36,7 +36,6 @@ ResultSet fran = VideoGame.Franchise();
 ResultSet eng = VideoGame.Engine();
 ResultSet pub = VideoGame.Publisher();
 ResultSet lau = VideoGame.Launch();
-//ResultSet game = VideoGame.selectStatement("Select * from Game"); 
 %>
 
 <div id="Header">
@@ -75,7 +74,8 @@ ResultSet lau = VideoGame.Launch();
 	</div>
 
 	<div class="box" onclick="submitPreferences()" id="bottomBox" id="box8">
-		<a href="GAMELIST.jsp"><h2>SUBMIT</h2></a>
+		<!-- <a href="GAMELIST.jsp"><h2>SUBMIT</h2></a> -->
+		<h2>submit</h2>
 	</div>
 </div>
 

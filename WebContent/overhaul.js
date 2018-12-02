@@ -24,6 +24,27 @@ var queryEngine;
 var queryPublisher;
 var queryLaunch;
 
+var queryBase = "Select distinct game.gameTitle from ";
+
+import System.IO;
+var filePath = "/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt";
+
+//**************************** START FILTER CONTENT ****************************************************************
+	var franchise;
+	var hasFranchise = false;
+	var platform;
+	var hasPlatform = false;
+	var developer;
+	var hasDeveloper = false;
+	var publisher;
+	var hasPublisher = false;
+	var genre;
+	var hasGenre = false;
+	var year;
+	var hasYear = false;
+	var engine;
+	var hasEngine = false;
+
 //PREFERENCE SELECTIONS ********************************************************************************************
 
 function navStyleNormal() {
@@ -260,5 +281,179 @@ function selectLaunch(boxNumber) {
 //PREFERENCE SELECTIONS END ****************************************************************************************
 
 function submitPreferences() {
-	
+	filter(queryFranchise, queryPlatform, queryDeveloper, queryPublisher, queryGenre, queryLaunch, queryEngine);
+	var result = "";
+	result = result + queryBase + tables() + whereConditions();
+	console.log(result);
+	var sw : StreamWriter = new StreamWriter("/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt");
+    sw.WriteLine("Line to write");
+    sw.Flush();
+    sw.Close();
+
 }
+
+// function WriteFile(filepathIncludingFileName : String)
+// {
+//     var sw : StreamWriter = new StreamWriter(filepathIncludingFileName);
+//     sw.WriteLine("Line to write");
+//     sw.WriteLine("Another Line");
+//     sw.Flush();
+//     sw.Close();
+// }
+
+function filter(fr, pl, de, pu, ge, ye, en) {
+	franchise = fr;
+	platform = pl;
+	developer = de;
+	publisher = pu;
+	genre = ge; 
+	year = ye;
+	engine = en;
+	if (franchise != null) {
+		hasFranchise = true;
+	}
+	if (platform != null) {
+		hasPlatform = true;
+	}
+	if (developer != null) {
+		hasDeveloper = true;
+	}
+	if (publisher != null) {
+		hasPublisher = true;
+	}
+	if (genre != null) {
+		hasGenre = true;
+	}
+	if (year != null) {
+		hasYear = true;
+	}
+	if (engine != null) {
+		hasEngine = true;
+	}
+}
+
+function tables() {
+	var result = "";
+	result = result + "project.game";
+	if (hasFranchise) {
+		result = result + ", project.franchise";
+	}
+	if (hasPlatform) {
+		result = result + ", project.platform";
+	}
+	if (hasDeveloper) {
+		result = result + ", project.developer";
+	}
+	if (hasPublisher) {
+		result = result + ", project.publisher";
+	}
+	if (hasGenre) {
+		result = result + ", project.genre";
+	}
+	if (hasYear) {
+		result = result + ", project.launchDate";
+	}
+	if (hasEngine) {
+		result = result + ", project.engine";
+	}
+	return result;
+}
+
+function whereConditions() {
+	var result = "";
+	result = result + " Where ";
+	var needsAND = false;
+	console.log("franchise is " + hasFranchise);
+	if (hasFranchise) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "franchise.franchiseName = " + "'"+ franchise +"'";
+	}
+	console.log("platform is " + hasPlatform);
+	if (hasPlatform) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "platform.platformName = " + "'"+ platform +"'";
+		result = result + "AND ";
+		result = result + "game.gameTitle = platform.gameTitle";
+	}
+	console.log("Dev is " + hasDeveloper);
+	if (hasDeveloper) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "game.devName = " + "'"+ developer +"'";
+	}
+	console.log("pub is " + hasPublisher);
+	if (hasPublisher) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "game.pubName = " + "'"+ publisher +"'";
+	}
+	console.log("gen is " + hasGenre);
+	if (hasGenre) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "genre.genreName = " + "'"+ genre +"' ";
+		result = result + "AND ";
+		result = result + "game.gameTitle = genre.gameTitle";
+	}
+	console.log("year is " + hasYear);
+	if (hasYear) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "game.year = " + " '"+ year +"'";
+	}
+	console.log("Engine is " + hasEngine);
+	if (hasEngine) {
+		if (needsAND) {
+			result = result + " AND ";
+		}
+		else {
+			needsAND = true;
+		}
+		result = result + "game.engineName = " + " '"+ engine +"' ";
+	}
+	result = result + ";";
+	return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
