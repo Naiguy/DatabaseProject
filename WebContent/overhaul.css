@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 body {
-	background-color: black;
+	background-color: #161616;
 	font-family: "Lato", sans-serif;
 	margin: 0px;
+	font-family: 'Quicksand', sans-serif;
 }
 
 img {
@@ -24,9 +26,9 @@ h2 {
 }
 
 #Header {
-	background-color: #161616;
+	background-color: #1E1E1E;
 	padding-top: 10px;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #D4B116;
 }
 
 #mainContent {
@@ -272,65 +274,73 @@ a {
 }
 
 #gamebox0 {
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
   text-align: center;
+  border-radius: 2px;
 }
 #gamebox0:hover {
 	background-color: white;
 }
 #gamebox1 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
   text-align: center;
+  border-radius: 2px;
 }
 #gamebox1:hover {
 	background-color: white;
 }
 
 #gamebox2 { 
-  background-color: #161616; 
+  background-color: #363636; 
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox2:hover {
 	background-color: white;
 }
 
 #gamebox3 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox3:hover {
 	background-color: white;
 }
 
 #gamebox4 { 
-  background-color: #161616; 
+  background-color: #363636; 
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox4:hover {
 	background-color: white;
 }
 
 #gamebox5 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px; 
+  border-radius: 2px;
 }
 #gamebox5:hover {
 	background-color: white;
 }
 
 #gamebox6 { 
-  background-color: #161616; 
+  background-color: #363636; 
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox6:hover {
 	background-color: white;
 }
 
 #gamebox7 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox7:hover {
 	background-color: white;
@@ -338,107 +348,206 @@ a {
 
 #gamebox8 { 
   text-align: center;
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox8:hover {
 	background-color: white;
 }
 #gamebox9 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox9:hover {
 	background-color: white;
 }
 #gamebox10 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox10:hover {
 	background-color: white;
 }
 #gamebox11 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox11:hover {
 	background-color: white;
 }
 
 #gamebox12 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox12:hover {
 	background-color: white;
 }
 #gamebox13 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox13:hover {
 	background-color: white;
 }
 #gamebox14 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox14:hover {
 	background-color: white;
 }
 #gamebox15 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox15:hover {
 	background-color: white;
 }
 #gamebox16 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox16:hover {
 	background-color: white;
 }
 #gamebox17 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox17:hover {
 	background-color: white;
 }
 #gamebox18 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox18:hover {
 	background-color: white;
 }
 #gamebox19 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox19:hover {
 	background-color: white;
 }
 #gamebox20 { 
-  background-color: #161616;
+  background-color: #363636;
   height: 125px;
+  border-radius: 2px;
 }
 #gamebox20:hover {
+	background-color: white;
+}
+#gamebox21 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox21:hover {
+	background-color: white;
+}
+#gamebox22 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox22:hover {
+	background-color: white;
+}
+#gamebox23 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox23:hover {
+	background-color: white;
+}
+#gamebox24 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox24:hover {
+	background-color: white;
+}
+#gamebox25 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox25:hover {
+	background-color: white;
+}
+#gamebox26 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox26:hover {
+	background-color: white;
+}
+#gamebox27 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox27:hover {
+	background-color: white;
+}
+#gamebox28 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox28:hover {
+	background-color: white;
+}
+#gamebox29 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox29:hover {
+	background-color: white;
+}
+#gamebox30 { 
+  background-color: #363636;
+  height: 125px;
+  border-radius: 2px;
+}
+#gamebox30:hover {
 	background-color: white;
 }
 
 /*LIST PAGE LAYOUT *********************************************************************************/
 
+#listTitle {
+	margin-top: 4%;
+	font-size: 3em;
+}
+
 #ListBody {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 10vw 30vw 10vw;
   grid-gap: 1em;
 }
 
+header,
 footer {
   grid-column: 1 / span 2;
 }
@@ -450,13 +559,28 @@ footer {
   padding: 1em 0;
 }
 
+aside {
+	padding-top: 0%;
+	padding-left: 5%;
+}
+
+header,
 main,
 aside,
 footer {
-  background: #eaeaea;
-  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  background: #363636;
+  display: inline-block;
   align-items: center;
   justify-content: center;
+}
+header {
+	text-align: center;
+}
+
+.gameInfo {
+	font-size: 1.2em;
 }
 
 

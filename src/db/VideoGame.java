@@ -18,6 +18,11 @@ public class VideoGame {
 	public String publisher;
 	public String launch;
 	public String game;
+	public String rating;
+	public String image;
+	public String gameDev;
+	public String gamePub;
+	public String gameLaunch;
 	
 	public ArrayList<String> platList = new ArrayList<String>();
 	public ArrayList<String> devList = new ArrayList<String>();
@@ -236,7 +241,17 @@ public class VideoGame {
 			while(results.next()) {
 				System.out.println("into while statement");
 				game = results.getString("gameTitle");
+				rating = results.getString("gameRating");
+				image = results.getString("imageURL");
+				gamePub = results.getString("pubName");
+				gameDev = results.getString("devName");
+				gameLaunch = results.getString("launchDate");
 				gameInfo.add(game);
+				gameInfo.add(rating);
+				gameInfo.add(image);
+				gameInfo.add(gamePub);
+				gameInfo.add(gameDev);
+				gameInfo.add(gameLaunch);
 			}
 			dbconn.close();
 		}

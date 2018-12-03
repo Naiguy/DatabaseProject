@@ -26,26 +26,27 @@
 
 <%  ResultSet game = VideoGame.finalSelectStatement(results); %> 
 
-<%  System.out.println(VideoGame.gameInfo(0)); %>
+<%-- <%  System.out.println(VideoGame.gameInfo(0)); %> --%>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
 <div id="ListBody">
 
+	<header>
+		<strong><p id="listTitle"><%= VideoGame.gameInfo.get(0) %></p></strong>
+	</header>
 	<main>
-	  Main
+		
 	</main>
 	<aside>
-	  Sidebar
+	 	<p class="gameInfo"><strong>Rating:</strong> <%= VideoGame.gameInfo.get(1) %></p><br>
+		<p class="gameInfo"><strong>Developer:</strong> <%= VideoGame.gameInfo.get(3) %></p><br>
+		<p class="gameInfo"><strong>Publisher:</strong> <%= VideoGame.gameInfo.get(4) %></p><br>
+		<p class="gameInfo"><strong>Launch Date:</strong> <%= VideoGame.gameInfo.get(5) %></p><br>
 	</aside>
-	<footer>
-	  Footer
-	</footer>
 
 </div>
-
-
 
 </body>
 </html>
