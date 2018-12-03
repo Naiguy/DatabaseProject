@@ -239,6 +239,12 @@ a {
 
 /*GRID SYSTEM *************************************************************************/
 
+#listhover:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
 #listOutside {
 	margin-right: 10%;
 	margin-left: 10%;
@@ -258,98 +264,130 @@ a {
   text-align: center;
 } 
 
+.wrapperGAMELIST {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  color: white;
+  text-align: center;
+}
+
+.box0 {
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+  text-align: center;
+}
+
 .box1 { 
-  grid-column-start: 1; 
-  grid-column-end: 2; 
-  grid-row-start: 1; 
-  grid-row-end: 2; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+  text-align: center;
 }
 
 .box2 { 
-  grid-column-start: 2; 
-  grid-column-end: 3;
-  grid-row-start: 1; 
-  grid-row-end: 2; 
-  border: 2px solid #093275;
+  background-color: #161616; 
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box3 { 
-  grid-column-start: 3; 
-  grid-column-end: 4;
-  grid-row-start: 1; 
-  grid-row-end: 2; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box4 { 
-  grid-column-start: 4; 
-  grid-column-end: 5;
-  grid-row-start: 1; 
-  grid-row-end: 2; 
-  border: 2px solid #093275;
+  background-color: #161616; 
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box5 { 
-  grid-column-start: 1; 
-  grid-column-end: 2;
-  grid-row-start: 2; 
-  grid-row-end: 3; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px; 
+  /*border: 2px solid #093275;*/
 }
 
 .box6 { 
-  grid-column-start: 2; 
-  grid-column-end: 3;
-  grid-row-start: 2; 
-  grid-row-end: 3; 
-  border: 2px solid #093275;
+  background-color: #161616; 
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box7 { 
-  grid-column-start: 3; 
-  grid-column-end: 4;
-  grid-row-start: 2; 
-  grid-row-end: 3; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box8 { 
-	text-align: center
-  grid-column-start: 4; 
-  grid-column-end: 5;
-  grid-row-start: 2; 
-  grid-row-end: 3; 
-  border: 2px solid #093275;
+  text-align: center;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 .box9 { 
-  grid-column-start: 1; 
-  grid-column-end: 2;
-  grid-row-start: 3; 
-  grid-row-end: 4; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 .box10 { 
-  grid-column-start: 2; 
-  grid-column-end: 3;
-  grid-row-start: 3; 
-  grid-row-end: 4; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 .box11 { 
-  grid-column-start: 3; 
-  grid-column-end: 4;
-  grid-row-start: 3; 
-  grid-row-end: 4; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 .box12 { 
-  grid-column-start: 4; 
-  grid-column-end: 5;
-  grid-row-start: 3; 
-  grid-row-end: 4; 
-  border: 2px solid #093275;
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box13 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box14 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box15, hover { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box16 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box17 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box18 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box19 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
+}
+.box20 { 
+  background-color: #161616;
+  height: 125px;
+  /*border: 2px solid #093275;*/
 }
 
 /*LIST PAGE LAYOUT *********************************************************************************/

@@ -35,23 +35,23 @@
 	<img src="photos/gameoverhaul.png">
 </div>
 
-<div id="listOutside">
-	<!-- loop -->
+<div id="listOutside"> 
 
-	  <div class="box" class="grid">
+	<div class="wrapperGAMELIST">
  	  	<% 
 			for(int i=0; i<VideoGame.gameList.size(); i++)
 			{
 		%>
-				<div class="box" >
+				<div class="box<%=i%>" id="listhover" >
 				<% System.out.println(VideoGame.gameList.get(i)); %>
 					<h2><%= VideoGame.gameList.get(i) %></h2>
 				</div> 
 		<% 
 			}
 		%> 
+
 	  </div>
-</div>
+ </div>
 
 </body>
 </html>
