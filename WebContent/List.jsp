@@ -15,6 +15,18 @@
 
 <%@ page import="java.io.*" %> 
 <%@ page import="db.*" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.ArrayList" %>
+
+<%  VideoGame VideoGame = new VideoGame(); %>
+<%  String results=request.getParameter("name"); %>
+<%  System.out.println("Game = "+results); %> 
+
+<%  ResultSet game = VideoGame.finalSelectStatement(results); %> 
+
+<%  System.out.println(VideoGame.gameInfo(0)); %>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">

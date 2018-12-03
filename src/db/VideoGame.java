@@ -27,6 +27,7 @@ public class VideoGame {
 	public ArrayList<String> pubList = new ArrayList<String>();
 	public ArrayList<String> lauList = new ArrayList<String>();
 	public ArrayList<String> gameList = new ArrayList<String>();
+	public ArrayList<String> gameInfo = new ArrayList<String>();
 	
 	String dbPath="jdbc:mysql://localhost:3306/project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
@@ -212,6 +213,29 @@ public class VideoGame {
 				System.out.println("into while statement");
 				game = results.getString("gameTitle");
 				gameList.add(game);
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3 select method");
+			return null;
+		}
+		return results;
+	}
+	
+	public ResultSet finalSelectStatement( String game ) {
+		try {
+			dbconn=instance.newConnection();
+			String findGame = "select distinct * from game where gameTitle=";
+			sql=dbconn.prepareStatement(findGame+"\""+game+"\"");
+			ResultSet results;
+			results=sql.executeQuery(findGame+"\""+game+"\"");
+			System.out.println("query="+findGame+game);
+			while(results.next()) {
+				System.out.println("into while statement");
+				game = results.getString("gameTitle");
+				gameInfo.add(game);
 			}
 			dbconn.close();
 		}

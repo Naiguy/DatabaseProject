@@ -28,9 +28,6 @@ var gameText;
 
 var queryBase = "Select distinct game.gameTitle from ";
 
-//import System.IO;
-// var filePath = "/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt";
-
 //**************************** START FILTER CONTENT ****************************************************************
 	var franchise;
 	var hasFranchise = false;
