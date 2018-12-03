@@ -24,25 +24,18 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
 
-
-
-
-
 <%  String Game; %>
 <%  VideoGame VideoGame = new VideoGame(); %>
-<%  String results=request.getParameter("result"); %>
+<%  String results=request.getParameter("name"); %>
 <%  System.out.println("Gamelist result = "+results); %>  
 
-
-<%-- <%  ResultSet game = VideoGame.selectStatement(results[0]); %>  --%> 
+<%  ResultSet game = VideoGame.selectStatement(results); %>  
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
 
 <div id="listOutside">
-	<!-- <div class="wrapper"> -->
-	
 	<!-- loop -->
 
 	  <div class="box" class="grid">
@@ -51,14 +44,13 @@
 			{
 		%>
 				<div class="box" >
+				<% System.out.println(VideoGame.gameList.get(i)); %>
 					<h2><%= VideoGame.gameList.get(i) %></h2>
 				</div> 
 		<% 
 			}
 		%> 
 	  </div>
-
-	<!-- </div> -->
 </div>
 
 </body>

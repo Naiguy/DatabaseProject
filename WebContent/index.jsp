@@ -74,7 +74,7 @@ ResultSet lau = VideoGame.Launch();
 	</div>
 
 	<div class="box" onclick="submitPreferences()" id="bottomBox" id="box8">
-	<a href="GAMELIST.jsp"><h2>SUBMIT</h2></a> 
+	<!-- <a href="GAMELIST.jsp"> --><h2>SUBMIT</h2><!-- </a> --> 
 	</div>
 </div>
 
@@ -170,6 +170,12 @@ for(int i=0; i<VideoGame.lauList.size(); i++)
 </div>
 
 <div id="mainContent">
+
+	<form>
+		Enter Your Name: <input type="hidden" id=userName value=""/>
+	</form>
+
+	<div id="ajaxGetUserServletResponse"></div>
 
 </div>
 

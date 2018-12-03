@@ -208,7 +208,6 @@ public class VideoGame {
 			ResultSet results;
 			results=sql.executeQuery(query);
 			System.out.println("query="+query);
-			
 			while(results.next()) {
 				System.out.println("into while statement");
 				game = results.getString("gameTitle");

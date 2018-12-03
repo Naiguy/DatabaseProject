@@ -285,12 +285,7 @@ function submitPreferences() {
 	var result = "";
 	result = result + queryBase + tables() + whereConditions();
 	console.log(result);
-
-	$.ajax({
-    type:'GET',
-    url:"VideoGame.java"+result,
-    data: {result:result},
-    });
+	window.location.replace("GAMELIST.jsp?name="+result);
 }
 
 function filter(fr, pl, de, pu, ge, ye, en) {
@@ -432,18 +427,6 @@ function whereConditions() {
 	result = result + ";";
 	return result;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
