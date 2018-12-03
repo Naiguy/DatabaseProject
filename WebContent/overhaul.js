@@ -357,6 +357,7 @@ function whereConditions() {
 	var result = "";
 	result = result + " Where ";
 	var needsAND = false;
+	//franchise
 	console.log("franchise is " + hasFranchise);
 	if (hasFranchise) {
 		if (needsAND) {
@@ -365,8 +366,11 @@ function whereConditions() {
 		else {
 			needsAND = true;
 		}
-		result = result + "franchise.franchiseName = " + "'"+ franchise +"'";
+		result = result + "franchise.franchiseName = " + "'"+ franchise +"' ";
+		result = result + "AND ";
+		result = result + "game.gameTitle = franchise.gameTitle";
 	}
+	//platform
 	console.log("platform is " + hasPlatform);
 	if (hasPlatform) {
 		if (needsAND) {
@@ -379,6 +383,7 @@ function whereConditions() {
 		result = result + "AND ";
 		result = result + "game.gameTitle = platform.gameTitle";
 	}
+	//developer
 	console.log("Dev is " + hasDeveloper);
 	if (hasDeveloper) {
 		if (needsAND) {
@@ -387,8 +392,11 @@ function whereConditions() {
 		else {
 			needsAND = true;
 		}
-		result = result + "game.devName = " + "'"+ developer +"'";
+		result = result + "developer.devName = " + "'"+ developer +"' ";
+		result = result + "AND ";
+		result = result + "game.gameTitle = developer.gameTitle";
 	}
+	//publisher
 	console.log("pub is " + hasPublisher);
 	if (hasPublisher) {
 		if (needsAND) {
@@ -397,8 +405,11 @@ function whereConditions() {
 		else {
 			needsAND = true;
 		}
-		result = result + "game.pubName = " + "'"+ publisher +"'";
+		result = result + "publisher.pubName = " + "'"+ publisher +"' ";
+		result = result + "AND ";
+		result = result + "game.gameTitle = publisher.gameTitle";
 	}
+	//genre
 	console.log("gen is " + hasGenre);
 	if (hasGenre) {
 		if (needsAND) {
@@ -411,6 +422,7 @@ function whereConditions() {
 		result = result + "AND ";
 		result = result + "game.gameTitle = genre.gameTitle";
 	}
+	//year
 	console.log("year is " + hasYear);
 	if (hasYear) {
 		if (needsAND) {
@@ -419,7 +431,7 @@ function whereConditions() {
 		else {
 			needsAND = true;
 		}
-		result = result + "game.year = " + " '"+ year +"'";
+		result = result + "game.launchDate = " + " '"+ year +"'";
 	}
 	console.log("Engine is " + hasEngine);
 	if (hasEngine) {
@@ -429,9 +441,12 @@ function whereConditions() {
 		else {
 			needsAND = true;
 		}
-		result = result + "game.engineName = " + " '"+ engine +"' ";
+		result = result + "engine.engineName = " + "'"+ engine +"' ";
+		result = result + "AND ";
+		result = result + "game.gameTitle = engine.gameTitle";
 	}
 	result = result + ";";
+	console.log(result);
 	return result;
 }
 
