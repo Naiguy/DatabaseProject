@@ -26,8 +26,8 @@ var queryLaunch;
 
 var queryBase = "Select distinct game.gameTitle from ";
 
-import System.IO;
-var filePath = "/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt";
+//import System.IO;
+// var filePath = "/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt";
 
 //**************************** START FILTER CONTENT ****************************************************************
 	var franchise;
@@ -285,21 +285,13 @@ function submitPreferences() {
 	var result = "";
 	result = result + queryBase + tables() + whereConditions();
 	console.log(result);
-	var sw : StreamWriter = new StreamWriter("/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt");
-    sw.WriteLine("Line to write");
-    sw.Flush();
-    sw.Close();
 
+	$.ajax({
+    type:'GET',
+    url:"GAMELIST.jsp",
+    data: {result:result},
+    });
 }
-
-// function WriteFile(filepathIncludingFileName : String)
-// {
-//     var sw : StreamWriter = new StreamWriter(filepathIncludingFileName);
-//     sw.WriteLine("Line to write");
-//     sw.WriteLine("Another Line");
-//     sw.Flush();
-//     sw.Close();
-// }
 
 function filter(fr, pl, de, pu, ge, ye, en) {
 	franchise = fr;

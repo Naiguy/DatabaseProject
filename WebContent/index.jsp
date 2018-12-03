@@ -74,8 +74,7 @@ ResultSet lau = VideoGame.Launch();
 	</div>
 
 	<div class="box" onclick="submitPreferences()" id="bottomBox" id="box8">
-		<!-- <a href="GAMELIST.jsp"><h2>SUBMIT</h2></a> -->
-		<h2>submit</h2>
+	<a href="GAMELIST.jsp"><h2>SUBMIT</h2></a> 
 	</div>
 </div>
 

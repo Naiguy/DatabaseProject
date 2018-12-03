@@ -9,6 +9,10 @@
 <link rel="icon" href="photos/icon.png">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
 <script type="text/javascript" src="overhaul.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <title>SELECT A GAME</title>
 </head>
 <body>
@@ -19,31 +23,25 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
+
+
+
+
+
+<%  String Game; %>
 <%  VideoGame VideoGame = new VideoGame(); %>
-<%-- <%  ResultSet game = VideoGame.selectStatement(""); %>  --%>
+<%  String results=request.getParameter("result"); %>
+<%  System.out.println("Gamelist result = "+results); %>  
 
 
-<%  BufferedReader br = new BufferedReader(new FileReader("/Users/os4584kh/eclipse-workspace/Database_Project/WebContent/test.txt"));
-StringBuilder sb = new StringBuilder();
-
-String line = br.readLine();
-while (line != null) {
-  sb.append(line).append("\n");
-  line = br.readLine();
-}
-
-String fileAsString = sb.toString(); 
-System.out.println(sb.toString());
-%>
-
-
+<%-- <%  ResultSet game = VideoGame.selectStatement(results[0]); %>  --%> 
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
 
 <div id="listOutside">
-	<div class="wrapper">
+	<!-- <div class="wrapper"> -->
 	
 	<!-- loop -->
 
@@ -52,7 +50,7 @@ System.out.println(sb.toString());
 			for(int i=0; i<VideoGame.gameList.size(); i++)
 			{
 		%>
-				<div class="box" id="gamebox<%=i%>">
+				<div class="box" >
 					<h2><%= VideoGame.gameList.get(i) %></h2>
 				</div> 
 		<% 
@@ -60,7 +58,7 @@ System.out.println(sb.toString());
 		%> 
 	  </div>
 
-	</div>
+	<!-- </div> -->
 </div>
 
 </body>

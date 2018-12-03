@@ -203,28 +203,28 @@ public class VideoGame {
 		
 	public ResultSet selectStatement( String query ) {
 		try {
-			
 			dbconn=instance.newConnection();
 			sql=dbconn.prepareStatement(query);
 			ResultSet results;
-			results=sql.executeQuery();
+			results=sql.executeQuery(query);
+			System.out.println("query="+query);
 			while(results.next()) {
+				System.out.println("into while statement");
 				game = results.getString("gameTitle");
 				gameList.add(game);
 			}
-			
 			dbconn.close();
-			return results;
 		}
 		catch (Exception err) {
 			System.out.println(err.getMessage());
-			System.out.println("catch 3");
+			System.out.println("catch 3 select method");
 			return null;
 		}
+		return results;
 	}
 	
 	public static void main(String[] args) {	
 		//instance.entry("1234", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf");
-		instance.selectStatement("Select gameTitle from Game");
+		//instance.selectStatement("Select gameTitle from Game");
 	}
 }
