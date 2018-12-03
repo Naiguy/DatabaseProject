@@ -185,7 +185,6 @@ function selectSystem(boxNumber) {
 	document.getElementById("systemLight").style.borderRadius = "5px";
 	systemtemp = ("systembox" + boxNumber);
 	queryPlatform = document.getElementById("plat"+boxNumber).textContent;
-	alert(queryPlatform);
 	console.log(queryPlatform);
 }
 
@@ -201,7 +200,6 @@ function selectGenre(boxNumber) {
 	document.getElementById("genreLight").style.borderRadius = "5px";
 	genretemp = ("genrebox" + boxNumber);
 	queryGenre = document.getElementById("gen"+boxNumber).textContent;
-	alert(queryGenre);
 	console.log(queryGenre);
 }
 
@@ -217,7 +215,6 @@ function selectDeveloper(boxNumber) {
 	document.getElementById("developerLight").style.borderRadius = "5px";
 	devtemp = ("developerbox" + boxNumber);
 	queryDeveloper = document.getElementById("dev"+boxNumber).textContent;
-	alert(queryDeveloper);
 }
 
 function selectFranchise(boxNumber) {
@@ -232,7 +229,6 @@ function selectFranchise(boxNumber) {
 	document.getElementById("franchiseLight").style.borderRadius = "5px";
 	frantemp = ("franchisebox" + boxNumber);
 	queryFranchise = document.getElementById("fran"+boxNumber).textContent;
-	alert(queryFranchise);
 }
 
 function selectEngine(boxNumber) {
@@ -247,7 +243,6 @@ function selectEngine(boxNumber) {
 	document.getElementById("engineLight").style.borderRadius = "5px";
 	enginetemp = ("enginebox" + boxNumber);
 	queryEngine = document.getElementById("eng"+boxNumber).textContent;
-	alert(queryEngine);
 }
 
 function selectPublisher(boxNumber) {
@@ -262,7 +257,6 @@ function selectPublisher(boxNumber) {
 	document.getElementById("publisherLight").style.borderRadius = "5px";
 	pubtemp = ("publisherbox" + boxNumber);
 	queryPublisher = document.getElementById("pub"+boxNumber).textContent;
-	alert(queryPublisher);
 }
 
 function selectLaunch(boxNumber) {
@@ -277,7 +271,6 @@ function selectLaunch(boxNumber) {
 	document.getElementById("launchLight").style.borderRadius = "5px";
 	launchtemp = ("launchbox" + boxNumber);
 	queryLaunch = document.getElementById("Lau"+boxNumber).textContent;
-	alert(queryLaunch);
 }
 
 //PREFERENCE SELECTIONS END ****************************************************************************************
