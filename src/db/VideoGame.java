@@ -164,10 +164,11 @@ public class VideoGame {
 	public ResultSet Publisher() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct pubName from project.Publisher");
+			sql=dbconn.prepareStatement("Select distinct pubName from project.publisher");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct pubName from project.Publisher");
-			System.out.println("query="+"Select distinct pubName from project.Publisher");
+			results=sql.executeQuery("Select distinct pubName from project.publisher");
+			System.out.println("query="+"Select distinct pubName from project.publisher");
+			System.out.println("HOW MUCH CAN A DOOGDFFFFDFDFFF");
 			while (results.next()) {
 				publisher = results.getString("pubName");
 				pubList.add(publisher);
@@ -184,10 +185,10 @@ public class VideoGame {
 	public ResultSet Launch() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct launchDate from project.launchDate");
+			sql=dbconn.prepareStatement("Select distinct launchDate from project.game");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct launchDate from project.launchDate");
-			System.out.println("query="+"Select distinct launchDate from project.launchDate");
+			results=sql.executeQuery("Select distinct launchDate from project.game");
+			System.out.println("query="+"Select distinct launchDate from project.game");
 			while (results.next()) {
 				launch = results.getString("launchDate");
 				lauList.add(launch);
