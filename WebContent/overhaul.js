@@ -24,6 +24,8 @@ var queryEngine;
 var queryPublisher;
 var queryLaunch;
 
+var gameText;
+
 var queryBase = "Select distinct game.gameTitle from ";
 
 //import System.IO;
@@ -286,6 +288,11 @@ function submitPreferences() {
 	result = result + queryBase + tables() + whereConditions();
 	console.log(result);
 	window.location.replace("GAMELIST.jsp?name="+result);
+}
+
+function submitGame(boxNumber) {
+	gameText = document.getElementById("gamebox"+boxNumber).textContent;
+	window.location.replace("List.jsp?name="+gameText);
 }
 
 function filter(fr, pl, de, pu, ge, ye, en) {

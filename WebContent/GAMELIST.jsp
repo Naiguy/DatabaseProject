@@ -42,7 +42,7 @@
 			for(int i=0; i<VideoGame.gameList.size(); i++)
 			{
 		%>
-				<div class="box<%=i%>" id="listhover" >
+				<div id="gamebox<%=i%>" class="listhover" onclick="submitGame(<%=i%>)">
 				<% System.out.println(VideoGame.gameList.get(i)); %>
 					<h2><%= VideoGame.gameList.get(i) %></h2>
 				</div> 

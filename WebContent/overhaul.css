@@ -239,8 +239,7 @@ a {
 
 /*GRID SYSTEM *************************************************************************/
 
-#listhover:hover {
-	background-color: white;
+.listhover:hover {
 	color: black;
 	cursor: pointer;
 }
@@ -272,122 +271,184 @@ a {
   text-align: center;
 }
 
-.box0 {
+#gamebox0 {
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
   text-align: center;
 }
-
-.box1 { 
+#gamebox0:hover {
+	background-color: white;
+}
+#gamebox1 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
   text-align: center;
 }
+#gamebox1:hover {
+	background-color: white;
+}
 
-.box2 { 
+#gamebox2 { 
   background-color: #161616; 
   height: 125px;
   /*border: 2px solid #093275;*/
 }
+#gamebox2:hover {
+	background-color: white;
+}
 
-.box3 { 
+#gamebox3 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
+#gamebox3:hover {
+	background-color: white;
+}
 
-.box4 { 
+#gamebox4 { 
   background-color: #161616; 
   height: 125px;
   /*border: 2px solid #093275;*/
 }
+#gamebox4:hover {
+	background-color: white;
+}
 
-.box5 { 
+#gamebox5 { 
   background-color: #161616;
   height: 125px; 
   /*border: 2px solid #093275;*/
 }
+#gamebox5:hover {
+	background-color: white;
+}
 
-.box6 { 
+#gamebox6 { 
   background-color: #161616; 
   height: 125px;
   /*border: 2px solid #093275;*/
 }
+#gamebox6:hover {
+	background-color: white;
+}
 
-.box7 { 
+#gamebox7 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
+#gamebox7:hover {
+	background-color: white;
+}
 
-.box8 { 
+#gamebox8 { 
   text-align: center;
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box9 { 
+#gamebox8:hover {
+	background-color: white;
+}
+#gamebox9 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box10 { 
+#gamebox9:hover {
+	background-color: white;
+}
+#gamebox10 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box11 { 
+#gamebox10:hover {
+	background-color: white;
+}
+#gamebox11 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
+}
+#gamebox11:hover {
+	background-color: white;
 }
 
-.box12 { 
+#gamebox12 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box13 { 
+#gamebox12:hover {
+	background-color: white;
+}
+#gamebox13 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box14 { 
+#gamebox13:hover {
+	background-color: white;
+}
+#gamebox14 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box15, hover { 
+#gamebox14:hover {
+	background-color: white;
+}
+#gamebox15 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box16 { 
+#gamebox15:hover {
+	background-color: white;
+}
+#gamebox16 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box17 { 
+#gamebox16:hover {
+	background-color: white;
+}
+#gamebox17 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box18 { 
+#gamebox17:hover {
+	background-color: white;
+}
+#gamebox18 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box19 { 
+#gamebox18:hover {
+	background-color: white;
+}
+#gamebox19 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
 }
-.box20 { 
+#gamebox19:hover {
+	background-color: white;
+}
+#gamebox20 { 
   background-color: #161616;
   height: 125px;
   /*border: 2px solid #093275;*/
+}
+#gamebox20:hover {
+	background-color: white;
 }
 
 /*LIST PAGE LAYOUT *********************************************************************************/
