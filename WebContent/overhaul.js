@@ -288,7 +288,7 @@ function submitPreferences() {
 
 	$.ajax({
     type:'GET',
-    url:"GAMELIST.jsp",
+    url:"VideoGame.java"+result,
     data: {result:result},
     });
 }
