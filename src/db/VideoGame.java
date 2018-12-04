@@ -18,6 +18,12 @@ public class VideoGame {
 	public String publisher;
 	public String launch;
 	public String game;
+	public String listimg;
+	
+	public String finalgame;
+	public String finaldev;
+	public String finalpub;
+	
 	public String rating;
 	public String image;
 	public String gameDev;
@@ -33,6 +39,9 @@ public class VideoGame {
 	public ArrayList<String> lauList = new ArrayList<String>();
 	public ArrayList<String> gameList = new ArrayList<String>();
 	public ArrayList<String> gameInfo = new ArrayList<String>();
+	public ArrayList<String> devInfo = new ArrayList<String>();
+	public ArrayList<String> pubInfo = new ArrayList<String>();
+	public ArrayList<String> imgList = new ArrayList<String>();
 	
 	String dbPath="jdbc:mysql://localhost:3306/project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
@@ -218,7 +227,9 @@ public class VideoGame {
 			while(results.next()) {
 				System.out.println("into while statement");
 				game = results.getString("gameTitle");
+				listimg = results.getString("imageURL");
 				gameList.add(game);
+				imgList.add(listimg);
 			}
 			dbconn.close();
 		}
@@ -240,17 +251,13 @@ public class VideoGame {
 			System.out.println("query="+findGame+game);
 			while(results.next()) {
 				System.out.println("into while statement");
-				game = results.getString("gameTitle");
+				finalgame = results.getString("gameTitle");
 				rating = results.getString("gameRating");
 				image = results.getString("imageURL");
-				gamePub = results.getString("pubName");
-				gameDev = results.getString("devName");
 				gameLaunch = results.getString("launchDate");
-				gameInfo.add(game);
+				gameInfo.add(finalgame);
 				gameInfo.add(rating);
 				gameInfo.add(image);
-				gameInfo.add(gamePub);
-				gameInfo.add(gameDev);
 				gameInfo.add(gameLaunch);
 			}
 			dbconn.close();
@@ -262,6 +269,54 @@ public class VideoGame {
 		}
 		return results;
 	}
+	
+	public ResultSet devSelectStatement( String game ) {
+		try {
+			dbconn=instance.newConnection();
+			String findGame = "select distinct devName from developer where gameTitle=";
+			sql=dbconn.prepareStatement(findGame+"\""+game+"\"");
+			ResultSet results;
+			results=sql.executeQuery(findGame+"\""+game+"\"");
+			System.out.println("query="+findGame+game);
+			while(results.next()) {
+				System.out.println("into while statement");
+				finaldev = results.getString("devName");
+				devInfo.add(finaldev);
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3 select method");
+			return null;
+		}
+		return results;
+	}
+	
+	public ResultSet pubSelectStatement( String game ) {
+		try {
+			dbconn=instance.newConnection();
+			String findGame = "select distinct pubName from publisher where gameTitle=";
+			sql=dbconn.prepareStatement(findGame+"\""+game+"\"");
+			ResultSet results;
+			results=sql.executeQuery(findGame+"\""+game+"\"");
+			System.out.println("query="+findGame+game);
+			while(results.next()) {
+				System.out.println("into while statement");
+				finalpub = results.getString("pubName");
+				pubInfo.add(finalpub);
+			}
+			dbconn.close();
+		}
+		catch (Exception err) {
+			System.out.println(err.getMessage());
+			System.out.println("catch 3 select method");
+			return null;
+		}
+		return results;
+	}
+	
+	
 	
 	public static void main(String[] args) {	
 		//instance.entry("1234", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf");

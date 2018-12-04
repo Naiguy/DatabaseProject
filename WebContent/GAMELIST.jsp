@@ -45,6 +45,8 @@
 				<div id="gamebox<%=i%>" class="listhover" onclick="submitGame(<%=i%>)">
 				<% System.out.println(VideoGame.gameList.get(i)); %>
 					<h2><%= VideoGame.gameList.get(i) %></h2>
+					<hr>
+					<img id="imgInfoGamelist" src="<%=VideoGame.imgList.get(i)%>">
 				</div> 
 		<% 
 			}

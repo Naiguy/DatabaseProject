@@ -14,7 +14,14 @@ img {
 }
 
 h2 {
-	margin-top: 0px;
+	margin-top: 5px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+hr {
+	margin-top: -6%;
+	width: 90%;
 }
 
 /*HEADER *****************************************************************/
@@ -275,18 +282,20 @@ a {
 
 #gamebox0 {
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   text-align: center;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox0:hover {
 	background-color: white;
 }
 #gamebox1 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   text-align: center;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox1:hover {
 	background-color: white;
@@ -294,8 +303,9 @@ a {
 
 #gamebox2 { 
   background-color: #363636; 
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox2:hover {
 	background-color: white;
@@ -303,8 +313,9 @@ a {
 
 #gamebox3 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox3:hover {
 	background-color: white;
@@ -312,8 +323,9 @@ a {
 
 #gamebox4 { 
   background-color: #363636; 
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox4:hover {
 	background-color: white;
@@ -321,8 +333,9 @@ a {
 
 #gamebox5 { 
   background-color: #363636;
-  height: 125px; 
+  height: 225px; 
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox5:hover {
 	background-color: white;
@@ -330,8 +343,9 @@ a {
 
 #gamebox6 { 
   background-color: #363636; 
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox6:hover {
 	background-color: white;
@@ -339,8 +353,9 @@ a {
 
 #gamebox7 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox7:hover {
 	background-color: white;
@@ -349,32 +364,36 @@ a {
 #gamebox8 { 
   text-align: center;
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox8:hover {
 	background-color: white;
 }
 #gamebox9 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox9:hover {
 	background-color: white;
 }
 #gamebox10 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox10:hover {
 	background-color: white;
 }
 #gamebox11 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox11:hover {
 	background-color: white;
@@ -382,152 +401,171 @@ a {
 
 #gamebox12 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox12:hover {
 	background-color: white;
 }
 #gamebox13 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox13:hover {
 	background-color: white;
 }
 #gamebox14 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox14:hover {
 	background-color: white;
 }
 #gamebox15 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox15:hover {
 	background-color: white;
 }
 #gamebox16 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox16:hover {
 	background-color: white;
 }
 #gamebox17 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox17:hover {
 	background-color: white;
 }
 #gamebox18 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox18:hover {
 	background-color: white;
 }
 #gamebox19 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox19:hover {
 	background-color: white;
 }
 #gamebox20 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox20:hover {
 	background-color: white;
 }
 #gamebox21 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox21:hover {
 	background-color: white;
 }
 #gamebox22 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox22:hover {
 	background-color: white;
 }
 #gamebox23 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox23:hover {
 	background-color: white;
 }
 #gamebox24 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox24:hover {
 	background-color: white;
 }
 #gamebox25 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox25:hover {
 	background-color: white;
 }
 #gamebox26 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox26:hover {
 	background-color: white;
 }
 #gamebox27 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox27:hover {
 	background-color: white;
 }
 #gamebox28 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox28:hover {
 	background-color: white;
 }
 #gamebox29 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox29:hover {
 	background-color: white;
 }
 #gamebox30 { 
   background-color: #363636;
-  height: 125px;
+  height: 225px;
   border-radius: 2px;
+  border-right: 2px solid #D4B116;
 }
 #gamebox30:hover {
 	background-color: white;
@@ -535,12 +573,23 @@ a {
 
 /*LIST PAGE LAYOUT *********************************************************************************/
 
+#imgInfo {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#imgInfoGamelist {
+	height: 75%;
+	overflow-x: hidden;
+}
+
 #listTitle {
 	margin-top: 4%;
 	font-size: 3em;
 }
 
 #ListBody {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 10vw 30vw 10vw;
@@ -574,9 +623,15 @@ footer {
   display: inline-block;
   align-items: center;
   justify-content: center;
+  border-right: 2px solid #D4B116;
 }
 header {
 	text-align: center;
+}
+
+main {
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .gameInfo {

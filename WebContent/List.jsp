@@ -25,25 +25,25 @@
 <%  System.out.println("Game = "+results); %> 
 
 <%  ResultSet game = VideoGame.finalSelectStatement(results); %> 
-
-<%-- <%  System.out.println(VideoGame.gameInfo(0)); %> --%>
+<%  ResultSet dev = VideoGame.devSelectStatement(results); %> 
+<%  ResultSet pub = VideoGame.pubSelectStatement(results); %> 
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
-</div>
+</div><br>
 <div id="ListBody">
 
 	<header>
 		<strong><p id="listTitle"><%= VideoGame.gameInfo.get(0) %></p></strong>
 	</header>
 	<main>
-		
+		<img id="imgInfo" src="<%=VideoGame.gameInfo.get(2)%>">
 	</main>
 	<aside>
 	 	<p class="gameInfo"><strong>Rating:</strong> <%= VideoGame.gameInfo.get(1) %></p><br>
-		<p class="gameInfo"><strong>Developer:</strong> <%= VideoGame.gameInfo.get(3) %></p><br>
-		<p class="gameInfo"><strong>Publisher:</strong> <%= VideoGame.gameInfo.get(4) %></p><br>
-		<p class="gameInfo"><strong>Launch Date:</strong> <%= VideoGame.gameInfo.get(5) %></p><br>
+ 		<p class="gameInfo"><strong>Developer:</strong> <%= VideoGame.devInfo.get(0) %></p><br>
+		<p class="gameInfo"><strong>Publisher:</strong> <%= VideoGame.pubInfo.get(0) %></p><br> 
+		<p class="gameInfo"><strong>Launch Date:</strong> <%= VideoGame.gameInfo.get(3) %></p><br>
 	</aside>
 
 </div>

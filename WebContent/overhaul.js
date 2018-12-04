@@ -26,7 +26,7 @@ var queryLaunch;
 
 var gameText;
 
-var queryBase = "Select distinct game.gameTitle from ";
+var queryBase = "Select distinct * from ";
 
 //**************************** START FILTER CONTENT ****************************************************************
 	var franchise;
