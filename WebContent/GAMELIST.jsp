@@ -8,6 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="photos/icon.png">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script type="text/javascript" src="overhaul.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -34,6 +35,8 @@
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div>
+
+<a href="index.jsp"><i id="home" class="fa fa-home" aria-hidden="true"></i></a>
 
 <div id="listOutside"> 
 

@@ -27,12 +27,13 @@
 <%  ResultSet game = VideoGame.finalSelectStatement(results); %> 
 <%  ResultSet dev = VideoGame.devSelectStatement(results); %> 
 <%  ResultSet pub = VideoGame.pubSelectStatement(results); %> 
-
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
 </div><br>
-<div id="ListBody">
 
+<a href="index.jsp"><i id="home" class="fa fa-home" aria-hidden="true"></i></a>
+
+<div id="ListBody">
 	<header>
 		<strong><p id="listTitle"><%= VideoGame.gameInfo.get(0) %></p></strong>
 	</header>

@@ -638,5 +638,24 @@ main {
 	font-size: 1.2em;
 }
 
+.fa {
+	color: white;
+	font-size: 4em;
+}
+
+
+
+#home {
+	margin-top: 2%;
+	margin-left: 2.5%; 
+	color: #a8a8a8;
+	font-size: 4em;
+	position: fixed;
+}
+
+#home:hover {
+	color: white;
+	cursor: pointer;
+}
 
 
