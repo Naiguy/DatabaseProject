@@ -8,6 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="photos/icon.png">
 <link rel="stylesheet" type="text/css" href="overhaul.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script type="text/javascript" src="overhaul.js"></script>
 <title>GAME</title>
 </head>
@@ -29,7 +30,7 @@
 <%  ResultSet pub = VideoGame.pubSelectStatement(results); %> 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
-</div><br>
+</div>
 
 <a href="index.jsp"><i id="home" class="fa fa-home" aria-hidden="true"></i></a>
 
@@ -46,7 +47,6 @@
 		<p class="gameInfo"><strong>Publisher:</strong> <%= VideoGame.pubInfo.get(0) %></p><br> 
 		<p class="gameInfo"><strong>Launch Date:</strong> <%= VideoGame.gameInfo.get(3) %></p><br>
 	</aside>
-
 </div>
 
 </body>

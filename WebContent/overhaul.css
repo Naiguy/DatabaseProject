@@ -4,6 +4,7 @@ body {
 	font-family: "Lato", sans-serif;
 	margin: 0px;
 	font-family: 'Quicksand', sans-serif;
+	padding-bottom: 20px;
 }
 
 img {
@@ -590,22 +591,22 @@ a {
 
 #ListBody {
   margin-top: 5%;
+  padding-top: 2%;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 10vw 30vw 10vw;
   grid-gap: 1em;
 }
 
-header,
-footer {
+header {
   grid-column: 1 / span 2;
 }
 
 /* Demo Specific Styles */
 #ListBody {
   margin: 0 auto;
-  max-width: 56em;
-  padding: 1em 0;
+  max-width: 64em;
+  padding: 2em 0;
 }
 
 aside {
@@ -615,8 +616,7 @@ aside {
 
 header,
 main,
-aside,
-footer {
+aside {
   font-family: 'Quicksand', sans-serif;
   color: white;
   background: #363636;
@@ -643,8 +643,6 @@ main {
 	font-size: 4em;
 }
 
-
-
 #home {
 	margin-top: 2%;
 	margin-left: 2.5%; 
@@ -657,5 +655,4 @@ main {
 	color: white;
 	cursor: pointer;
 }
-
 
