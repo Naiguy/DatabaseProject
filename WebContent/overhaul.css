@@ -14,6 +14,12 @@ img {
 	margin-left: auto;
 }
 
+h1{
+	text-align: center;
+	color: white;
+	margin: 40% auto;
+}
+
 h2 {
 	margin-top: 5px;
 	text-overflow: ellipsis;

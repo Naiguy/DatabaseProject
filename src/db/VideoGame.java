@@ -19,6 +19,7 @@ public class VideoGame {
 	public String launch;
 	public String game;
 	public String listimg;
+	public boolean isSetEmpty = true;
 	
 	public String finalgame;
 	public String finaldev;
@@ -79,10 +80,10 @@ public class VideoGame {
 	public ResultSet System() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct platformName from project.Platform");
+			sql=dbconn.prepareStatement("Select distinct platformName from project.platform");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct platformName from project.Platform");
-			System.out.println("query="+"Select distinct platformName from project.Platform");
+			results=sql.executeQuery("Select distinct platformName from project.platform");
+			System.out.println("query="+"Select distinct platformName from project.platform");
 			while (results.next()) {
 				system = results.getString("platformName");
 				platList.add(system);
@@ -99,10 +100,10 @@ public class VideoGame {
 	public ResultSet Genre() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct genreName from project.Genre");
+			sql=dbconn.prepareStatement("Select distinct genreName from project.genre");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct genreName from project.Genre");
-			System.out.println("query="+"Select distict genreName from project.Genre");
+			results=sql.executeQuery("Select distinct genreName from project.genre");
+			System.out.println("query="+"Select distict genreName from project.genre");
 			while (results.next()) {
 				genre = results.getString("genreName");
 				genList.add(genre);
@@ -119,10 +120,10 @@ public class VideoGame {
 	public ResultSet Developer() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct devName from project.Developer");
+			sql=dbconn.prepareStatement("Select distinct devName from project.developer");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct devName from project.Developer");
-			System.out.println("query="+"Select distinct devName from project.Developer");
+			results=sql.executeQuery("Select distinct devName from project.developer");
+			System.out.println("query="+"Select distinct devName from project.developer");
 			while (results.next()) {
 				developer = results.getString("devName");
 				devList.add(developer);
@@ -139,10 +140,10 @@ public class VideoGame {
 	public ResultSet Franchise() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct franchiseName from project.Franchise");
+			sql=dbconn.prepareStatement("Select distinct franchiseName from project.franchise");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct franchiseName from project.Franchise");
-			System.out.println("query="+"Select distinct franchiseName from project.Franchise");
+			results=sql.executeQuery("Select distinct franchiseName from project.franchise");
+			System.out.println("query="+"Select distinct franchiseName from project.franchise");
 			while (results.next()) {
 				franchise = results.getString("franchiseName");
 				franList.add(franchise);
@@ -159,10 +160,10 @@ public class VideoGame {
 	public ResultSet Engine() {
 		try {
 			dbconn=instance.newConnection();
-			sql=dbconn.prepareStatement("Select distinct engineName from project.Engine");
+			sql=dbconn.prepareStatement("Select distinct engineName from project.engine");
 			ResultSet results;
-			results=sql.executeQuery("Select distinct engineName from project.Engine");
-			System.out.println("query="+"Select distinct engineName from project.Engine");
+			results=sql.executeQuery("Select distinct engineName from project.engine");
+			System.out.println("query="+"Select distinct engineName from project.engine");
 			while (results.next()) {
 				engine = results.getString("engineName");
 				engList.add(engine);
@@ -183,7 +184,6 @@ public class VideoGame {
 			ResultSet results;
 			results=sql.executeQuery("Select distinct pubName from project.publisher");
 			System.out.println("query="+"Select distinct pubName from project.publisher");
-			System.out.println("HOW MUCH CAN A DOOGDFFFFDFDFFF");
 			while (results.next()) {
 				publisher = results.getString("pubName");
 				pubList.add(publisher);
@@ -225,6 +225,7 @@ public class VideoGame {
 			results=sql.executeQuery(query);
 			System.out.println("query="+query);
 			while(results.next()) {
+				isSetEmpty = false;
 				System.out.println("into while statement");
 				game = results.getString("gameTitle");
 				listimg = results.getString("imageURL");
@@ -234,8 +235,10 @@ public class VideoGame {
 			dbconn.close();
 		}
 		catch (Exception err) {
+			isSetEmpty = true;
 			System.out.println(err.getMessage());
 			System.out.println("catch 3 select method");
+			
 			return null;
 		}
 		return results;

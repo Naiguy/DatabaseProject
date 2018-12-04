@@ -33,7 +33,8 @@
 </div>
 
 <a href="index.jsp"><i id="home" class="fa fa-home" aria-hidden="true"></i></a>
-
+<!-- <i class="fa fa-arrow-left" aria-hidden="true"></i>
+ -->
 <div id="ListBody">
 	<header>
 		<strong><p id="listTitle"><%= VideoGame.gameInfo.get(0) %></p></strong>

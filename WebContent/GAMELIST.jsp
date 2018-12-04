@@ -25,12 +25,11 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.ArrayList" %>
 
-<%  String Game; %>
 <%  VideoGame VideoGame = new VideoGame(); %>
 <%  String results=request.getParameter("name"); %>
 <%  System.out.println("Gamelist result = "+results); %>  
 
-<%  ResultSet game = VideoGame.selectStatement(results); %>  
+<%  ResultSet game = VideoGame.selectStatement(results); %>
 
 <div id="Header">
 	<img src="photos/gameoverhaul.png">
@@ -42,6 +41,7 @@
 
 	<div class="wrapperGAMELIST">
  	  	<% 
+ 	  	System.out.println(VideoGame.isSetEmpty);
 			for(int i=0; i<VideoGame.gameList.size(); i++)
 			{
 		%>
@@ -54,8 +54,13 @@
 		<% 
 			}
 		%> 
-
 	  </div>
+	  <% 
+		if(VideoGame.isSetEmpty) {
+			%> <h1>We currently do not have any games that match your selection. Please return to the homepage and make another selection</h1> <% 
+		} else {
+		}
+		%>
  </div>
 
 </body>
